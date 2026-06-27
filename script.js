@@ -362,10 +362,10 @@ const exploreContent = {
         copyBtn: "Copy Result",
         restart: "Start Over",
         copied: "Copied!",
-        minHint25: "Min 25 chars, max 200",
-        minHint30: "Min 30 chars, max 300",
+        minHint25: "Min 25 chars, max 500",
+        minHint30: "Min 30 chars, max 1000",
         minHint50: "Min 50 chars, max 300",
-        minHint60: "Min 60 chars, max 300",
+        minHint60: "Min 60 chars, max 1000",
         disclaimer: "This exploration is purely experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nTo make the exploration content align with your thoughts as much as possible, please describe each section in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary. Each input section has minimum and maximum character limits that must be met to proceed.",
         understood: "I understand"
     },
@@ -381,10 +381,10 @@ const exploreContent = {
         copyBtn: "複製結果",
         restart: "重新開始",
         copied: "已複製！",
-        minHint25: "最少25字，不超過200字",
-        minHint30: "最少30字，不超過300字",
+        minHint25: "最少25字，不超過500字",
+        minHint30: "最少30字，不超過1000字",
         minHint50: "最少50字，不超過300字",
-        minHint60: "最少60字，不超過300字",
+        minHint60: "最少60字，不超過1000字",
         disclaimer: "本探索純屬實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n為使探索內容盡量切合你的想法，在每一段輸入時，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。每一段輸入內容都有文字字數最低及最高的限制，必須要滿足才能往下進行。",
         understood: "我知道了"
     },
@@ -400,11 +400,11 @@ const exploreContent = {
         copyBtn: "Copier le résultat",
         restart: "Recommencer",
         copied: "Copié !",
-        minHint30: "Min 30 car., max 200",
+        minHint30: "Min 30 car., max 1000",
         minHint100: "Min 100 car., max 300",
-        minHint25: "Min 25 car., max 200",
+        minHint25: "Min 25 car., max 500",
         minHint50: "Min 50 car., max 300",
-        minHint60: "Min 60 car., max 300",
+        minHint60: "Min 60 car., max 1000",
         disclaimer: "Cette exploration est purement expérimentale et ne revêt aucune signification ou finalité psychologique ou psychiatrique.\nPour que le contenu de l'exploration corresponde au mieux à vos pensées, veuillez décrire chaque section sous forme de « récit » avec autant de détails que possible, ou ajoutez les informations contextuelles nécessaires. Chaque section a des limites de caractères minimales et maximales à respecter.",
         understood: "J'ai compris"
     },
@@ -420,11 +420,11 @@ const exploreContent = {
         copyBtn: "Copiar resultado",
         restart: "Empezar de nuevo",
         copied: "¡Copiado!",
-        minHint30: "Mín 30 car., máx 200",
+        minHint30: "Mín 30 car., máx 1000",
         minHint100: "Mín 100 car., máx 300",
-        minHint25: "Mín 25 car., máx 200",
+        minHint25: "Mín 25 car., máx 500",
         minHint50: "Mín 50 car., máx 300",
-        minHint60: "Mín 60 car., máx 300",
+        minHint60: "Mín 60 car., máx 1000",
         disclaimer: "Esta exploración es puramente experimental y no tiene ningún significado o propósito psicológico o psiquiátrico científico.\nPara que el contenido se ajuste a tus pensamientos, describe cada sección de la forma más detallada posible en estilo de \"historia\", o añade información de contexto que consideres necesaria. Cada sección tiene límites mínimos y máximos de caracteres que deben cumplirse.",
         understood: "Entendido"
     },
@@ -440,11 +440,11 @@ const exploreContent = {
         copyBtn: "結果をコピー",
         restart: "最初から",
         copied: "コピーしました！",
-        minHint30: "最低30文字、最大200文字",
+        minHint30: "最低30文字、最大1000文字",
         minHint100: "最低100文字、最大300文字",
-        minHint25: "最低25文字、最大200文字",
+        minHint25: "最低25文字、最大500文字",
         minHint50: "最低50文字、最大300文字",
-        minHint60: "最低60文字、最大300文字",
+        minHint60: "最低60文字、最大1000文字",
         disclaimer: "この探索は純粋に実験的なものであり、心理学的または精神科学的な意味や目的は一切ありません。\n探索内容があなたの考えに沿うように、各セクションではできるだけ詳しく「物語」形式で説明するか、必要な背景情報を追加してください。各入力セクションには最低・最大文字数の制限があり、満たす必要があります。",
         understood: "了解しました"
     },
@@ -460,11 +460,11 @@ const exploreContent = {
         copyBtn: "결과 복사",
         restart: "다시 시작",
         copied: "복사됨!",
-        minHint30: "최소 30자, 최대 200자",
+        minHint30: "최소 30자, 최대 1000자",
         minHint100: "최소 100자, 최대 300자",
-        minHint25: "최소 25자, 최대 200자",
+        minHint25: "최소 25자, 최대 500자",
         minHint50: "최소 50자, 최대 300자",
-        minHint60: "최소 60자, 최대 300자",
+        minHint60: "최소 60자, 최대 1000자",
         disclaimer: "이 탐구는 순수하게 실험적인 성격이며, 어떠한 심리학적 또는 정신과학적 의미나 목적도 없습니다.\n탐구 내용이 당신의 생각에 부합하도록, 각 섹션에서 가능한 한 자세히 '이야기하기' 방식으로 설명하거나, 필요한 배경 정보를 추가해 주세요. 각 입력 섹션에는 최소 및 최대 글자 수 제한이 있으며, 이를 충족해야 진행할 수 있습니다.",
         understood: "알겠습니다"
     },
@@ -480,11 +480,11 @@ const exploreContent = {
         copyBtn: "Ergebnis kopieren",
         restart: "Neu starten",
         copied: "Kopiert!",
-        minHint30: "Min 30 Zeichen, max 200",
+        minHint30: "Min 30 Zeichen, max 1000",
         minHint100: "Min 100 Zeichen, max 300",
-        minHint25: "Min 25 Zeichen, max 200",
+        minHint25: "Min 25 Zeichen, max 500",
         minHint50: "Min 50 Zeichen, max 300",
-        minHint60: "Min 60 Zeichen, max 300",
+        minHint60: "Min 60 Zeichen, max 1000",
         disclaimer: "Diese Erforschung ist rein experimenteller Natur und hat keinerlei psychologische oder psychiatrische wissenschaftliche Bedeutung oder Zweck.\nDamit der Inhalt Ihren Gedanken m\u00F6glichst entspricht, beschreiben Sie bitte jeden Abschnitt so detailliert wie m\u00F6glich in Form einer Geschichte oder f\u00FCgen Sie notwendige Hintergrundinformationen hinzu. Jeder Abschnitt hat Mindest- und H\u00F6chstzeichenbegrenzungen.",
         understood: "Verstanden"
     },
@@ -500,11 +500,11 @@ const exploreContent = {
         copyBtn: "Скопировать",
         restart: "Начать заново",
         copied: "Скопировано!",
-        minHint30: "Мин 30 символов, макс 200",
+        minHint30: "Мин 30 символов, макс 1000",
         minHint100: "Мин 100 символов, макс 300",
-        minHint25: "Мин 25 символов, макс 200",
+        minHint25: "Мин 25 символов, макс 500",
         minHint50: "Мин 50 символов, макс 300",
-        minHint60: "Мин 60 символов, макс 300",
+        minHint60: "Мин 60 символов, макс 1000",
         disclaimer: "Данное исследование носит исключительно экспериментальный характер и не имеет психологического или психиатрического научного значения или цели.\nЧтобы содержание соответствовало вашим мыслям, описывайте каждый раздел как можно подробнее в формате «рассказа» или добавляйте необходимую фоновую информацию. Каждый раздел имеет минимальное и максимальное ограничение по количеству символов.",
         understood: "Понятно"
     },
@@ -520,11 +520,11 @@ const exploreContent = {
         copyBtn: "نسخ النتيجة",
         restart: "ابدأ من جديد",
         copied: "تم النسخ!",
-        minHint30: "٣٠ حرف كحد أدنى، ٢٠٠ كحد أقصى",
+        minHint30: "٣٠ حرف كحد أدنى، ١٠٠٠ كحد أقصى",
         minHint100: "١٠٠ حرف كحد أدنى، ٣٠٠ كحد أقصى",
-        minHint25: "٢٥ حرف كحد أدنى، ٢٠٠ كحد أقصى",
+        minHint25: "٢٥ حرف كحد أدنى، ٥٠٠ كحد أقصى",
         minHint50: "٥٠ حرف كحد أدنى، ٣٠٠ كحد أقصى",
-        minHint60: "٦٠ حرف كحد أدنى، ٣٠٠ كحد أقصى",
+        minHint60: "٦٠ حرف كحد أدنى، ١٠٠٠ كحد أقصى",
         disclaimer: "هذا الاستكشاف تجريبي بحت ولا يحمل أي أهمية أو غرض نفسي أو علمي.\nلكي يتوافق المحتوى مع أفكارك، يرجى وصف كل قسم بأسلوب \"سرد القصة\" بأكبر قدر ممكن من التفصيل، أو إضافة معلومات خلفية تراها ضرورية. لكل قسم حدود دنيا وقصوى لعدد الأحرف يجب استيفاؤها.",
         understood: "فهمت"
     },
@@ -540,11 +540,11 @@ const exploreContent = {
         copyBtn: "Copiar resultado",
         restart: "Recomeçar",
         copied: "Copiado!",
-        minHint30: "Mín 30 car., máx 200",
+        minHint30: "Mín 30 car., máx 1000",
         minHint100: "Mín 100 car., máx 300",
-        minHint25: "Mín 25 car., máx 200",
+        minHint25: "Mín 25 car., máx 500",
         minHint50: "Mín 50 car., máx 300",
-        minHint60: "Mín 60 car., máx 300",
+        minHint60: "Mín 60 car., máx 1000",
         disclaimer: "Esta exploração é puramente experimental e não possui qualquer significado ou propósito psicológico ou psiquiátrico.\nPara que o conteúdo corresponda aos seus pensamentos, descreva cada seção da forma mais detalhada possível no estilo de \"contar uma história\", ou adicione informações de contexto necessárias. Cada seção tem limites mínimos e máximos de caracteres que devem ser cumpridos.",
         understood: "Entendi"
     }
@@ -635,7 +635,7 @@ function goToExplore() {
 function exploreDisclaimerOk() {
     const e = exploreContent[currentLang];
     showExploreStep('explore-step1');
-    setupCharCounter('explore-issue-input', 'issue-counter', 25, 200, 'explore-next1', e.minHint25 || e.minHint30);
+    setupCharCounter('explore-issue-input', 'issue-counter', 25, 500, 'explore-next1', e.minHint25 || e.minHint30);
 }
 
 function goToPractice() {
@@ -701,6 +701,9 @@ function drawPhotoCard() {
     const shuffle = document.getElementById('shuffle-scene-1');
     shuffle.style.display = 'block';
     shuffle.classList.add('playing');
+    // Hide text and button during shuffle
+    document.getElementById('practice-step2-text').style.display = 'none';
+    document.getElementById('next-step-btn').style.display = 'none';
 
     // Shuffle animation ~3s: cards spread in 8 directions, gather back, then reveal
     setTimeout(() => {
@@ -708,7 +711,10 @@ function drawPhotoCard() {
         shuffle.style.display = 'none';
         document.getElementById('photo-card-image').src = drawnPhotoNumber + '.PNG';
         document.getElementById('photo-revealed').classList.add('visible');
+        // Show text and button after reveal
+        document.getElementById('practice-step2-text').style.display = '';
         document.getElementById('practice-step2-text').textContent = d.afterPhoto;
+        document.getElementById('next-step-btn').style.display = '';
         document.getElementById('next-step-btn').textContent = d.next;
     }, 3200);
 }
@@ -825,17 +831,26 @@ function exploreDrawPhoto() {
     const shuffle = document.getElementById('explore-shuffle-1');
     shuffle.style.display = 'block';
     shuffle.classList.add('playing');
+    // Hide instruction and input during shuffle
+    document.getElementById('explore-step3-text').style.display = 'none';
+    document.getElementById('explore-next3').style.display = 'none';
+    const picWrapper = document.getElementById('explore-pic-desc').closest('.input-wrapper');
+    if (picWrapper) picWrapper.style.display = 'none';
 
     setTimeout(() => {
         shuffle.classList.remove('playing');
         shuffle.style.display = 'none';
         document.getElementById('explore-photo-img').src = exploreData.photoNum + '.PNG';
         document.getElementById('explore-photo-revealed').classList.add('visible');
+        // Show instruction and input after reveal
+        document.getElementById('explore-step3-text').style.display = '';
         document.getElementById('explore-step3-text').textContent = e.afterPhoto;
+        document.getElementById('explore-next3').style.display = '';
         document.getElementById('explore-next3').textContent = e.next;
         document.getElementById('explore-next3').disabled = true;
-        // Setup char counter (min 60, max 300)
-        setupCharCounter('explore-pic-desc', 'pic-desc-counter', 60, 300, 'explore-next3', e.minHint60 || e.minHint100);
+        if (picWrapper) picWrapper.style.display = '';
+        // Setup char counter (min 60, max 1000)
+        setupCharCounter('explore-pic-desc', 'pic-desc-counter', 60, 1000, 'explore-next3', e.minHint60 || e.minHint100);
     }, 3200);
 }
 
@@ -848,8 +863,8 @@ function exploreNext3() {
     document.getElementById('explore-step4-text').textContent = e.connectionQ;
     document.getElementById('explore-next4').textContent = e.next;
     document.getElementById('explore-next4').disabled = true;
-    // Setup char counter (min 30, max 300)
-    setupCharCounter('explore-personal-desc', 'personal-desc-counter', 30, 300, 'explore-next4', e.minHint30);
+    // Setup char counter (min 30, max 1000)
+    setupCharCounter('explore-personal-desc', 'personal-desc-counter', 30, 1000, 'explore-next4', e.minHint30);
 }
 
 // Step 4 → 5: After personal description
