@@ -25,7 +25,7 @@ const content = {
         afterPhoto: "Based on this image, please describe a short story of about 1 minute. Please describe in detail, including the people, events, time, place, and objects you see. Feel free to create background information if needed. When you're done, press Next.",
         next: "Next",
         beforeWord: "Now, please draw a word card.",
-        afterWord: "Based on the story you told earlier, please continue extending it, but connect the meaning of this word as the overall outcome or judgment of the story. How do you think the story should develop, or what would you add? Please explain in about 1 minute.",
+        afterWord: "Based on the story you told earlier, please continue extending it, but connect the meaning of \"{word}\" as the overall outcome or judgment of the story. How do you think the story should develop, or what would you add? Please explain in about 1 minute.",
         startOver: "Start Over",
         tapHint: "Tap the cards to draw"
     },
@@ -33,7 +33,7 @@ const content = {
         label: "繁體中文",
         heroTitle: "Mind Explorer",
         heroSubtitle: "透過圖像與文字，探索你的內在世界。",
-        welcomeText: `<p>這是幫助你探索自己想法的網站，當你遇到生活中難以決定的事情時，這個網站會幫助你篩掉所有的雜念，回到潛意識中你最偏好的決定，讓你能夠真正檢視你的本心，更深刻了解你在困境中真正想要的選擇，幫助你更容易面對挑戰困難。</p><p>如果你是第一次使用這個網站，可以先按練習，來訓練相關的想像力、創造力與聯想能力，這樣才能在正式探索中更精準的發覺自己內心的想法。</p>`,
+        welcomeText: `<p>這是幫助你探索自己想法的網站，當你遇到生活中難以決定的事情時，這個網站會幫助你篩掉所有的雜念，回到潛意識中你最偏好的決定，讓你能夠真正檢視你的本心，更深刻了解你在困境中真正想要的選擇，幫助你更容易面對挑戰與困難。</p><p>如果你是第一次使用這個網站，可以先按練習，來訓練相關的想像力、創造力與聯想能力，這樣才能在正式探索中更精準的發覺自己內心的想法。</p>`,
         exploreTitle: "探索",
         exploreDesc: "探索你的內心世界",
         practiceTitle: "練習",
@@ -48,7 +48,7 @@ const content = {
         afterPhoto: "請您根據這個圖案，描述一個1分鐘左右的小故事，請盡量詳細描述，包含你看到圖樣的人、事、時、地、物，必要時可以自己創造背景資訊。等你描述完，請按下一步。",
         next: "下一步",
         beforeWord: "現在，請抽出一張文字卡。",
-        afterWord: "請你依據之前所說明的故事繼續延伸，但是要連結這個文字的涵義當作故事的整體結果或者評斷，你認為整個故事應該要怎麼發展或者有什麼補充，請用約1分鐘說明內容。",
+        afterWord: "請你依據之前所說明的故事繼續延伸，但是要連結這個「{word}」涵義當作故事的整體結果或者評斷，你認為整個故事應該要怎麼發展或者有什麼補充，請用約 1 分鐘說明內容。",
         startOver: "重新開始",
         tapHint: "點擊卡牌抽取"
     },
@@ -355,16 +355,17 @@ const exploreContent = {
         placeholder: "Describe your current dilemma or question...",
         next: "Next",
         tapHint: "Tap the cards to draw",
-        afterPhoto: "Please think about your dilemma. Describe in detail what you see in this image, including relevant people, events, time, place, and objects. Please write in a storytelling style in the text box below.",
-        connectionQ: "If you feel connected to this story, why? Or what is your relationship with the people or things in the image? Please describe in detail using a storytelling style below.",
-        afterWord: 'If the story you told ultimately carries the meaning of "{word}", why do you think that is, or how might it happen? Please describe in detail using a storytelling style below.',
+        afterPhoto: "Please think about the dilemma you raised. Describe in detail what you see in this image, including relevant people, events, time, place, and objects. Please write in a storytelling style in the text box below.",
+        connectionQ: "Assuming you have a connection to this story, what do you think that connection is? Or what is your relationship with the people or things in the image? Why does this connection exist? Please describe in detail using a storytelling style below.",
+        afterWord: 'If the story you told ultimately carries the meaning of "{word}", why do you think that is, or how might it happen? Please extend the original story and describe in detail below.',
         finalText: "You can copy the result and paste it into an AI conversation for interpretation.",
         copyBtn: "Copy Result",
         restart: "Start Over",
         copied: "Copied!",
-        minHint30: "Min 30 chars, max 200",
-        minHint80: "Min 80 chars, max 300",
+        minHint25: "Min 25 chars, max 200",
+        minHint30: "Min 30 chars, max 300",
         minHint50: "Min 50 chars, max 300",
+        minHint60: "Min 60 chars, max 300",
         disclaimer: "This exploration is experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nTo make the exploration content align with your thoughts as much as possible, please describe each section in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary. Each input section has minimum and maximum character limits that must be met to proceed.",
         understood: "I understand"
     },
@@ -373,16 +374,17 @@ const exploreContent = {
         placeholder: "描述你目前的困境或問題...",
         next: "下一步",
         tapHint: "點擊卡牌抽取",
-        afterPhoto: "請思考你的困境，請盡量詳細描述你看到的畫面，最好包含相關的人、事、時、地、物資訊，並以說故事的方式輸入在下方的文字方塊中。",
-        connectionQ: "如果你跟這個故事有連結，為什麼？或者你跟畫面中的人或物有什麼關係？請盡量用說故事的方式，詳細輸入在下方文字方塊中。",
-        afterWord: '如果你所訴說的這個故事，最後會具有「{word}」的意涵，請問是為什麼或怎麼發生的？請一樣用說故事的方式，盡量詳細輸入在下面文字方塊。',
+        afterPhoto: "請思考你提出的困境，然後盡量詳細描述你看到的畫面，最好包含相關的人、事、時、地、物資訊，並以說故事的方式輸入在下方的文字方塊中。",
+        connectionQ: "假設你跟這個故事有連結，你認為這個連結是什麼？或者你跟畫面中的人或物有什麼關係？為什麼這樣的連結存在？請盡量用說故事的方式，詳細輸入在下方文字方塊中。",
+        afterWord: '如果你所訴說的這個故事，最後會具有「{word}」的意涵，請問是為什麼或怎麼發生的？請用延伸原本故事的方式，盡量詳細輸入在下面文字方塊。',
         finalText: "可將結果複製貼上到AI對話中，請AI幫忙解讀。",
         copyBtn: "複製結果",
         restart: "重新開始",
         copied: "已複製！",
-        minHint30: "最少30字，不超過200字",
-        minHint80: "最少80字，不超過300字",
+        minHint25: "最少25字，不超過200字",
+        minHint30: "最少30字，不超過300字",
         minHint50: "最少50字，不超過300字",
+        minHint60: "最少60字，不超過300字",
         disclaimer: "本探索是實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n為使探索內容盡量切合你的想法，在每一段輸入時，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。每一段輸入內容都有文字字數最低及最高的限制，必須要滿足才能往下進行。",
         understood: "我知道了"
     },
@@ -593,7 +595,7 @@ function goToExplore() {
 function exploreDisclaimerOk() {
     const e = exploreContent[currentLang];
     showExploreStep('explore-step1');
-    setupCharCounter('explore-issue-input', 'issue-counter', 30, 200, 'explore-next1', e.minHint30);
+    setupCharCounter('explore-issue-input', 'issue-counter', 25, 200, 'explore-next1', e.minHint25 || e.minHint30);
 }
 
 function goToPractice() {
@@ -697,7 +699,7 @@ function drawWordCard() {
                 ? drawnWord.en
                 : wordInLang + ' / ' + drawnWord.en;
             document.getElementById('recap-word-display').textContent = wordDisplay;
-            document.getElementById('practice-step5-text').textContent = d.afterWord;
+            document.getElementById('practice-step5-text').textContent = d.afterWord.replace('{word}', wordInLang);
             document.getElementById('restart-btn').textContent = d.startOver;
         }, 1500);
     }, 3200);
@@ -705,14 +707,7 @@ function drawWordCard() {
 
 // Restart
 function restartPractice() {
-    const d = content[currentLang];
-    resetPractice();
-    // Go directly to step 1 (skip disclaimer on restart)
-    document.getElementById('practice-step0').classList.remove('active');
-    document.getElementById('practice-step1').classList.add('active');
-    document.getElementById('practice-intro-text').textContent = d.practiceIntro;
-    document.getElementById('tap-hint-1').textContent = d.tapHint;
-    document.getElementById('tap-hint-2').textContent = d.tapHint;
+    goToMain();
 }
 
 // =============================================
@@ -786,8 +781,8 @@ function exploreDrawPhoto() {
         document.getElementById('explore-step3-text').textContent = e.afterPhoto;
         document.getElementById('explore-next3').textContent = e.next;
         document.getElementById('explore-next3').disabled = true;
-        // Setup char counter (min 80, max 300)
-        setupCharCounter('explore-pic-desc', 'pic-desc-counter', 80, 300, 'explore-next3', e.minHint80 || e.minHint100);
+        // Setup char counter (min 60, max 300)
+        setupCharCounter('explore-pic-desc', 'pic-desc-counter', 60, 300, 'explore-next3', e.minHint60 || e.minHint80 || e.minHint50);
     }, 3200);
 }
 
@@ -800,8 +795,8 @@ function exploreNext3() {
     document.getElementById('explore-step4-text').textContent = e.connectionQ;
     document.getElementById('explore-next4').textContent = e.next;
     document.getElementById('explore-next4').disabled = true;
-    // Setup char counter (min 50, max 300)
-    setupCharCounter('explore-personal-desc', 'personal-desc-counter', 50, 300, 'explore-next4', e.minHint50 || e.minHint100);
+    // Setup char counter (min 30, max 300)
+    setupCharCounter('explore-personal-desc', 'personal-desc-counter', 30, 300, 'explore-next4', e.minHint30);
 }
 
 // Step 4 → 5: After personal description
@@ -841,8 +836,8 @@ function exploreDrawWord() {
             document.getElementById('explore-step7-text').textContent = questionText;
             document.getElementById('explore-next7').textContent = e.next;
             document.getElementById('explore-next7').disabled = true;
-            // Setup char counter (min 80, max 300)
-            setupCharCounter('explore-wordpic-desc', 'wordpic-desc-counter', 80, 300, 'explore-next7', e.minHint80 || e.minHint100);
+            // Setup char counter (min 50, max 300)
+            setupCharCounter('explore-wordpic-desc', 'wordpic-desc-counter', 50, 300, 'explore-next7', e.minHint50);
         }, 1500);
     }, 3200);
 }
@@ -898,13 +893,7 @@ Please help me clarify my true inner thoughts based on the above, and generate y
 }
 
 function exploreRestart() {
-    exploreReset();
-    const e = exploreContent[currentLang];
-    document.getElementById('explore-intro-text').textContent = e.intro;
-    document.getElementById('explore-issue-input').placeholder = e.placeholder;
-    document.getElementById('explore-next1').textContent = e.next;
-    document.getElementById('explore-next1').disabled = true;
-    setupCharCounter('explore-issue-input', 'issue-counter', 30, 200, 'explore-next1', e.minHint30);
+    goToMain();
 }
 
 // =============================================
