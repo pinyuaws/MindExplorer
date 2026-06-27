@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Selection Page -->
+    <div id="language-page" class="page active">
+        <div class="stars"></div>
+        <div class="language-container">
+            <div class="logo-section">
+                <div class="logo-mark">
+                    <img src="logo.jpeg" alt="Mind Explorer" class="logo-img"/>
+                </div>
+                <h1 class="site-title">Mind Explorer</h1>
+                <p class="site-subtitle" id="lang-subtitle">Choose your language to begin</p>
+            </div>
+            <div class="language-grid">
+                <button class="language-btn" onclick="selectLanguage('en')">English</button>
+                <button class="language-btn" onclick="selectLanguage('zh-TW')">繁體中文</button>
+                <button class="language-btn" onclick="selectLanguage('fr')">Français</button>
+                <button class="language-btn" onclick="selectLanguage('es')">Español</button>
+                <button class="language-btn" onclick="selectLanguage('ja')">日本語</button>
+                <button class="language-btn" onclick="selectLanguage('ko')">한국어</button>
+                <button class="language-btn" onclick="selectLanguage('de')">Deutsch</button>
+                <button class="language-btn" onclick="selectLanguage('ru')">Русский</button>
+                <button class="language-btn" onclick="selectLanguage('ar')">العربية</button>
+                <button class="language-btn" onclick="selectLanguage('pt')">Português</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Page -->
+    <div id="main-page" class="page">
+        <div class="stars"></div>
+        <header class="main-header">
+            <div class="header-left">
+                <span class="header-title">Mind Explorer</span>
+            </div>
+            <nav class="header-nav">
+                <button class="nav-link active" id="nav-home" onclick="showMainFromNav()">
+                    <span id="nav-home-text">Home</span>
+                </button>
+                <button class="nav-link" id="nav-practice" onclick="goToPractice()">
+                    <span id="nav-practice-text">Practice</span>
+                </button>
+                <button class="nav-link" id="nav-explore" onclick="goToExplore()">
+                    <span id="nav-explore-text">Explore</span>
+                </button>
+            </nav>
+            <button class="lang-switch-btn" onclick="goToLanguagePage()">
+                🌐 <span id="current-lang-label">English</span>
+            </button>
+        </header>
+
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-visual">
+                    <div class="hero-cards">
+                        <div class="hero-card hero-card-back">
+                            <img src="photocard-back.jpeg" alt="" class="hero-card-img"/>
+                        </div>
+                        <div class="hero-card hero-card-front">
+                            <img src="wordcard-back.jpeg" alt="" class="hero-card-img"/>
+                        </div>
+                    </div>
+                    <div class="hero-glow"></div>
+                </div>
+                <h2 class="hero-title" id="hero-title">Mind Explorer</h2>
+                <p class="hero-subtitle" id="hero-subtitle">Explore your inner world through images and words.</p>
+                <div id="welcome-text" class="welcome-text"></div>
+            </section>
+
+            <!-- Divider -->
+            <div class="section-divider">
+                <svg viewBox="0 0 200 20" width="200" height="20">
+                    <line x1="0" y1="10" x2="80" y2="10" stroke="#E6C89A" stroke-width="0.5" opacity="0.4"/>
+                    <circle cx="100" cy="10" r="3" fill="none" stroke="#E6C89A" stroke-width="0.8" opacity="0.6"/>
+                    <circle cx="100" cy="10" r="1" fill="#E6C89A" opacity="0.6"/>
+                    <line x1="120" y1="10" x2="200" y2="10" stroke="#E6C89A" stroke-width="0.5" opacity="0.4"/>
+                </svg>
+            </div>
+
+            <!-- Options Section -->
+            <section class="options-section">
+                <div class="options-grid">
+                    <button class="option-card" onclick="goToPractice()">
+                        <div class="option-icon">
+                            <svg viewBox="0 0 64 64" width="56" height="56">
+                                <rect x="14" y="10" width="36" height="44" rx="3" fill="none" stroke="#E6C89A" stroke-width="0.8"/>
+                                <rect x="19" y="15" width="26" height="34" rx="2" fill="none" stroke="#E6C89A" stroke-width="0.5" opacity="0.5"/>
+                                <circle cx="32" cy="32" r="9" fill="none" stroke="#FF9A17" stroke-width="1"/>
+                                <circle cx="32" cy="32" r="2" fill="#FF9A17"/>
+                                <line x1="32" y1="23" x2="32" y2="26" stroke="#FF9A17" stroke-width="0.8"/>
+                                <line x1="32" y1="38" x2="32" y2="41" stroke="#FF9A17" stroke-width="0.8"/>
+                                <line x1="23" y1="32" x2="26" y2="32" stroke="#FF9A17" stroke-width="0.8"/>
+                                <line x1="38" y1="32" x2="41" y2="32" stroke="#FF9A17" stroke-width="0.8"/>
+                            </svg>
+                        </div>
+                        <h3 class="option-title" id="option-practice-title">Practice</h3>
+                        <p class="option-desc" id="option-practice-desc">Train your imagination</p>
+                    </button>
+                    <button class="option-card" onclick="goToExplore()">
+                        <div class="option-icon">
+                            <svg viewBox="0 0 64 64" width="56" height="56">
+                                <circle cx="32" cy="32" r="28" fill="none" stroke="#E6C89A" stroke-width="0.8"/>
+                                <path d="M32 12 L35 27 L50 25 L38 32 L50 39 L35 37 L32 52 L29 37 L14 39 L26 32 L14 25 L29 27 Z" 
+                                      fill="none" stroke="#E6C89A" stroke-width="1"/>
+                                <circle cx="32" cy="32" r="3" fill="#FF9A17"/>
+                            </svg>
+                        </div>
+                        <h3 class="option-title" id="option-explore-title">Explore</h3>
+                        <p class="option-desc" id="option-explore-desc">Discover your inner mind</p>
+                    </button>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <div class="section-divider">
+                <svg viewBox="0 0 200 20" width="200" height="20">
+                    <line x1="0" y1="10" x2="80" y2="10" stroke="#E6C89A" stroke-width="0.5" opacity="0.4"/>
+                    <circle cx="100" cy="10" r="3" fill="none" stroke="#E6C89A" stroke-width="0.8" opacity="0.6"/>
+                    <circle cx="100" cy="10" r="1" fill="#E6C89A" opacity="0.6"/>
+                    <line x1="120" y1="10" x2="200" y2="10" stroke="#E6C89A" stroke-width="0.5" opacity="0.4"/>
+                </svg>
+            </div>
+
+            <section class="how-section">
+                <h3 class="section-title" id="how-title">How It Works</h3>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40">
+                                <rect x="10" y="6" width="28" height="36" rx="3" fill="none" stroke="#E6C89A" stroke-width="1"/>
+                                <circle cx="24" cy="24" r="8" fill="none" stroke="#FF9A17" stroke-width="0.8"/>
+                            </svg>
+                        </div>
+                        <p class="step-text" id="step1-text">Draw an Image Card</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40">
+                                <rect x="10" y="6" width="28" height="36" rx="3" fill="none" stroke="#E6C89A" stroke-width="1"/>
+                                <text x="24" y="28" text-anchor="middle" fill="#FF9A17" font-size="12" font-family="Cinzel">A</text>
+                            </svg>
+                        </div>
+                        <p class="step-text" id="step2-text">Draw a Word Card</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40">
+                                <path d="M24 8 L26 20 L38 18 L28 24 L38 30 L26 28 L24 40 L22 28 L10 30 L20 24 L10 18 L22 20 Z" 
+                                      fill="none" stroke="#E6C89A" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <p class="step-text" id="step3-text">Discover Your Story</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Sub-Web 1: Explore -->
+    <div id="explore-page" class="page">
+        <div class="stars"></div>
+        <header class="main-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="goToMain()">←</button>
+                <span class="header-title">Mind Explorer</span>
+            </div>
+            <button class="lang-switch-btn" onclick="goToLanguagePage()">
+                🌐 <span id="current-lang-label-explore">English</span>
+            </button>
+        </header>
+        <main class="main-content explore-content">
+            <!-- Sticky user issue bar -->
+            <div class="sticky-issue-bar" id="sticky-issue-bar">
+                <span id="sticky-issue-text"></span>
+            </div>
+
+            <!-- Step 0: Disclaimer -->
+            <section id="explore-step0" class="explore-step active">
+                <p class="practice-instruction" id="explore-disclaimer"></p>
+                <button class="btn-primary" id="explore-disclaimer-btn" onclick="exploreDisclaimerOk()"></button>
+            </section>
+
+            <!-- Step 1: Enter your issue -->
+            <section id="explore-step1" class="explore-step">
+                <p class="practice-instruction" id="explore-intro-text"></p>
+                <div class="input-wrapper">
+                    <textarea class="text-input" id="explore-issue-input" rows="4" maxlength="200" placeholder=""></textarea>
+                    <span class="char-counter" id="issue-counter">0/200</span>
+                </div>
+                <button class="btn-primary" id="explore-next1" onclick="exploreNext1()" disabled></button>
+            </section>
+
+            <!-- Step 2: Photo card deck -->
+            <section id="explore-step2" class="explore-step">
+                <div class="card-deck" id="explore-photo-deck" onclick="exploreDrawPhoto()">
+                    <div class="deck-card deck-1"></div>
+                    <div class="deck-card deck-2"></div>
+                    <div class="deck-card deck-3"></div>
+                    <div class="deck-card deck-top">
+                        <img src="photocard-back.jpeg" alt="Card deck" class="deck-img"/>
+                    </div>
+                </div>
+                <p class="tap-hint" id="explore-tap-hint-1"></p>
+            </section>
+
+            <!-- Step 3: Shuffle + Photo reveal -->
+            <section id="explore-step3" class="explore-step">
+                <div class="shuffle-scene" id="explore-shuffle-1">
+                    <div class="spread-card sp-n"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-ne"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-e"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-se"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-s"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-sw"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-w"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-nw"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-center-card"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                </div>
+                <div class="revealed-card" id="explore-photo-revealed">
+                    <img id="explore-photo-img" src="" alt="Drawn card" class="revealed-img"/>
+                </div>
+                <p class="practice-instruction" id="explore-step3-text"></p>
+                <div class="input-wrapper">
+                    <textarea class="text-input" id="explore-pic-desc" rows="5" maxlength="300" placeholder=""></textarea>
+                    <span class="char-counter" id="pic-desc-counter">0/300</span>
+                </div>
+                <button class="btn-primary" id="explore-next3" onclick="exploreNext3()" disabled></button>
+            </section>
+
+            <!-- Step 4: Connection question (same photo stays) -->
+            <section id="explore-step4" class="explore-step">
+                <div class="revealed-card visible" id="explore-photo-step4">
+                    <img id="explore-photo-img-step4" src="" alt="Your card" class="revealed-img"/>
+                </div>
+                <p class="practice-instruction" id="explore-step4-text"></p>
+                <div class="input-wrapper">
+                    <textarea class="text-input" id="explore-personal-desc" rows="5" maxlength="300" placeholder=""></textarea>
+                    <span class="char-counter" id="personal-desc-counter">0/300</span>
+                </div>
+                <button class="btn-primary" id="explore-next4" onclick="exploreNext4()" disabled></button>
+            </section>
+
+            <!-- Step 5: Word card deck -->
+            <section id="explore-step5" class="explore-step">
+                <div class="card-deck" id="explore-word-deck" onclick="exploreDrawWord()">
+                    <div class="deck-card deck-1 word-deck"></div>
+                    <div class="deck-card deck-2 word-deck"></div>
+                    <div class="deck-card deck-3 word-deck"></div>
+                    <div class="deck-card deck-top word-deck">
+                        <img src="wordcard-back.jpeg" alt="Word card deck" class="deck-img"/>
+                    </div>
+                </div>
+                <p class="tap-hint" id="explore-tap-hint-2"></p>
+            </section>
+
+            <!-- Step 6: Shuffle + Word reveal -->
+            <section id="explore-step6" class="explore-step">
+                <div class="shuffle-scene" id="explore-shuffle-2">
+                    <div class="spread-card sp-n"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-ne"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-e"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-se"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-s"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-sw"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-w"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-nw"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-center-card"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                </div>
+                <div class="revealed-word-card" id="explore-word-revealed">
+                    <span id="explore-word-text" class="word-card-text"></span>
+                </div>
+            </section>
+
+            <!-- Step 7: Recap photo + word, then final question -->
+            <section id="explore-step7" class="explore-step">
+                <div class="recap-layout">
+                    <div class="recap-card">
+                        <img id="explore-recap-img" src="" alt="Your image card" class="recap-card-img"/>
+                    </div>
+                    <div class="recap-word-label" id="explore-recap-word"></div>
+                </div>
+                <p class="practice-instruction" id="explore-step7-text"></p>
+                <div class="input-wrapper">
+                    <textarea class="text-input" id="explore-wordpic-desc" rows="5" maxlength="300" placeholder=""></textarea>
+                    <span class="char-counter" id="wordpic-desc-counter">0/300</span>
+                </div>
+                <button class="btn-primary" id="explore-next7" onclick="exploreNext7()" disabled></button>
+            </section>
+
+            <!-- Step 8: Final result - copy & AI links -->
+            <section id="explore-step8" class="explore-step">
+                <p class="practice-instruction" id="explore-final-text"></p>
+                <button class="btn-primary" id="copy-result-btn" onclick="copyResult()"></button>
+                <div class="ai-links">
+                    <a href="https://chat.openai.com" target="_blank" rel="noopener" class="ai-link-btn">ChatGPT</a>
+                    <a href="https://gemini.google.com" target="_blank" rel="noopener" class="ai-link-btn">Gemini</a>
+                    <a href="https://claude.ai" target="_blank" rel="noopener" class="ai-link-btn">Claude</a>
+                </div>
+                <button class="btn-secondary" id="explore-restart-btn" onclick="exploreRestart()"></button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Sub-Web 2: Practice -->
+    <div id="practice-page" class="page">
+        <div class="stars"></div>
+        <header class="main-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="goToMain()">←</button>
+                <span class="header-title">Mind Explorer</span>
+            </div>
+            <button class="lang-switch-btn" onclick="goToLanguagePage()">
+                🌐 <span id="current-lang-label-practice">English</span>
+            </button>
+        </header>
+        <main class="main-content practice-content">
+
+            <!-- Step 0: Disclaimer -->
+            <section id="practice-step0" class="practice-step active">
+                <p class="practice-instruction" id="practice-disclaimer"></p>
+                <button class="btn-primary" id="practice-disclaimer-btn" onclick="practiceDisclaimerOk()"></button>
+            </section>
+
+            <!-- Step 1: Introduction + Photo Card Deck -->
+            <section id="practice-step1" class="practice-step">
+                <p class="practice-instruction" id="practice-intro-text"></p>
+                <div class="card-deck" id="photo-card-deck" onclick="drawPhotoCard()">
+                    <div class="deck-card deck-1"></div>
+                    <div class="deck-card deck-2"></div>
+                    <div class="deck-card deck-3"></div>
+                    <div class="deck-card deck-top">
+                        <img src="photocard-back.jpeg" alt="Card deck" class="deck-img"/>
+                    </div>
+                </div>
+                <p class="tap-hint" id="tap-hint-1"></p>
+            </section>
+
+            <!-- Step 2: Shuffling + Photo Card Reveal -->
+            <section id="practice-step2" class="practice-step">
+                <div class="shuffle-scene" id="shuffle-scene-1">
+                    <div class="spread-card sp-n"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-ne"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-e"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-se"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-s"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-sw"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-w"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-nw"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-center-card"><img src="photocard-back.jpeg" alt="" class="deck-img"/></div>
+                </div>
+                <div class="revealed-card" id="photo-revealed">
+                    <img id="photo-card-image" src="" alt="Drawn card" class="revealed-img"/>
+                </div>
+                <p class="practice-instruction" id="practice-step2-text"></p>
+                <button class="btn-primary" id="next-step-btn" onclick="goToStep3()"></button>
+            </section>
+
+            <!-- Step 3: Word Card Deck -->
+            <section id="practice-step3" class="practice-step">
+                <p class="practice-instruction" id="practice-step3-intro"></p>
+                <div class="card-deck" id="word-card-deck" onclick="drawWordCard()">
+                    <div class="deck-card deck-1 word-deck"></div>
+                    <div class="deck-card deck-2 word-deck"></div>
+                    <div class="deck-card deck-3 word-deck"></div>
+                    <div class="deck-card deck-top word-deck">
+                        <img src="wordcard-back.jpeg" alt="Word card deck" class="deck-img"/>
+                    </div>
+                </div>
+                <p class="tap-hint" id="tap-hint-2"></p>
+            </section>
+
+            <!-- Step 4: Word Card Reveal (2 sec) then recap -->
+            <section id="practice-step4" class="practice-step">
+                <div class="shuffle-scene" id="shuffle-scene-2">
+                    <div class="spread-card sp-n"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-ne"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-e"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-se"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-s"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-sw"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-w"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-card sp-nw"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                    <div class="spread-center-card"><img src="wordcard-back.jpeg" alt="" class="deck-img"/></div>
+                </div>
+                <div class="revealed-word-card" id="word-revealed">
+                    <span id="word-card-text" class="word-card-text"></span>
+                </div>
+            </section>
+
+            <!-- Step 5: Final recap - photo + word + instruction -->
+            <section id="practice-step5" class="practice-step">
+                <div class="recap-layout">
+                    <div class="recap-card">
+                        <img id="recap-photo-img" src="" alt="Your image card" class="recap-card-img"/>
+                    </div>
+                    <div class="recap-word-label" id="recap-word-display"></div>
+                </div>
+                <p class="practice-instruction" id="practice-step5-text"></p>
+                <button class="btn-primary" id="restart-btn" onclick="restartPractice()"></button>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Background Music -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Music Toggle Button -->
+    <button class="music-toggle" id="music-toggle" onclick="toggleMusic()" aria-label="Toggle music">
+        🔇
+    </button>
+</body>
+</html>
