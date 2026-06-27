@@ -366,7 +366,7 @@ const exploreContent = {
         minHint30: "Min 30 chars, max 300",
         minHint50: "Min 50 chars, max 300",
         minHint60: "Min 60 chars, max 300",
-        disclaimer: "This exploration is experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nTo make the exploration content align with your thoughts as much as possible, please describe each section in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary. Each input section has minimum and maximum character limits that must be met to proceed.",
+        disclaimer: "This exploration is purely experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nTo make the exploration content align with your thoughts as much as possible, please describe each section in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary. Each input section has minimum and maximum character limits that must be met to proceed.",
         understood: "I understand"
     },
     "zh-TW": {
@@ -385,7 +385,7 @@ const exploreContent = {
         minHint30: "最少30字，不超過300字",
         minHint50: "最少50字，不超過300字",
         minHint60: "最少60字，不超過300字",
-        disclaimer: "本探索是實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n為使探索內容盡量切合你的想法，在每一段輸入時，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。每一段輸入內容都有文字字數最低及最高的限制，必須要滿足才能往下進行。",
+        disclaimer: "本探索純屬實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n為使探索內容盡量切合你的想法，在每一段輸入時，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。每一段輸入內容都有文字字數最低及最高的限制，必須要滿足才能往下進行。",
         understood: "我知道了"
     },
     "fr": {
@@ -607,8 +607,8 @@ function goToPractice() {
     // Disclaimer
     const e = exploreContent[currentLang];
     const disclaimerText = (currentLang === 'zh-TW')
-        ? "本探索是實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n針對每一段的練習，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。"
-        : "This exploration is experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nFor each practice section, please describe in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary.";
+        ? "本探索純屬實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n針對每一段的練習，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。"
+        : "This exploration is purely experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nFor each practice section, please describe in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary.";
     document.getElementById('practice-disclaimer').textContent = disclaimerText;
     document.getElementById('practice-disclaimer-btn').textContent = e.understood || 'I understand';
     resetPractice();
