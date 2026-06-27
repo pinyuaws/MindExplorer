@@ -521,6 +521,27 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     transform: translateY(-2px);
 }
 
+/* === Visit Counter === */
+.visit-counter {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.total-visit-counter {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.08em;
+}
+
 /* === Music Toggle === */
 .music-toggle {
     position: fixed; bottom: 1.2rem; right: 1.2rem;

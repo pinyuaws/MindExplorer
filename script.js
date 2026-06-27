@@ -574,6 +574,7 @@ function selectLanguage(lang) {
         document.documentElement.removeAttribute('dir');
     }
     updateMainPage();
+    incrementTotalVisit();
     switchPage('language-page', 'main-page');
     localStorage.setItem('mindExplorerLang', lang);
 }
@@ -611,6 +612,7 @@ function goToLanguagePage() {
 function goToMain() {
     const activePage = document.querySelector('.page.active');
     if (currentLang === 'ar') document.documentElement.setAttribute('dir', 'rtl');
+    incrementTotalVisit();
     switchPage(activePage.id, 'main-page');
 }
 
@@ -965,6 +967,28 @@ function exploreRestart() {
 }
 
 // =============================================
+// VISIT COUNTER
+// =============================================
+function incrementVisitCounter(key, elementId) {
+    let count = parseInt(localStorage.getItem(key) || '0', 10);
+    count++;
+    localStorage.setItem(key, count);
+    document.getElementById(elementId).textContent = '#' + count;
+}
+
+function incrementTotalVisit() {
+    let count = parseInt(localStorage.getItem('totalVisitCount') || '0', 10);
+    count++;
+    localStorage.setItem('totalVisitCount', count);
+    updateTotalVisitDisplay(count);
+}
+
+function updateTotalVisitDisplay(count) {
+    const padded = String(count).padStart(6, '0');
+    document.getElementById('total-visit-counter').textContent = 'Total Visit: ' + padded;
+}
+
+// =============================================
 // BACKGROUND MUSIC
 // =============================================
 let musicPlaying = false;
@@ -1002,5 +1026,7 @@ document.addEventListener('click', startMusicOnInteraction);
 // INIT
 // =============================================
 window.addEventListener('DOMContentLoaded', () => {
-    // ready
+    // Display current total visit count
+    const count = parseInt(localStorage.getItem('totalVisitCount') || '0', 10);
+    updateTotalVisitDisplay(count);
 });
