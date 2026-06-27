@@ -401,7 +401,9 @@ const exploreContent = {
         restart: "Recommencer",
         copied: "Copié !",
         minHint30: "Min 30 car., max 200",
-        minHint100: "Min 100 car., max 300"
+        minHint100: "Min 100 car., max 300",
+        disclaimer: "Cette exploration est purement expérimentale et ne revêt aucune signification ou finalité psychologique ou psychiatrique.\nPour que le contenu de l'exploration corresponde au mieux à vos pensées, veuillez décrire chaque section sous forme de « récit » avec autant de détails que possible, ou ajoutez les informations contextuelles nécessaires. Chaque section a des limites de caractères minimales et maximales à respecter.",
+        understood: "J'ai compris"
     },
     "es": {
         intro: "Explorar tu subconsciente te ayudará a entender mejor lo que tu interior necesita. Piensa en el problema que te preocupa y escríbelo abajo.",
@@ -416,7 +418,9 @@ const exploreContent = {
         restart: "Empezar de nuevo",
         copied: "¡Copiado!",
         minHint30: "Mín 30 car., máx 200",
-        minHint100: "Mín 100 car., máx 300"
+        minHint100: "Mín 100 car., máx 300",
+        disclaimer: "Esta exploración es puramente experimental y no tiene ningún significado o propósito psicológico o psiquiátrico científico.\nPara que el contenido se ajuste a tus pensamientos, describe cada sección de la forma más detallada posible en estilo de \"historia\", o añade información de contexto que consideres necesaria. Cada sección tiene límites mínimos y máximos de caracteres que deben cumplirse.",
+        understood: "Entendido"
     },
     "ja": {
         intro: "潜在意識を探ることで、内心が本当に必要としているものをより深く理解できます。今あなたを悩ませている問題を考え、下のボックスに入力してください。",
@@ -431,7 +435,9 @@ const exploreContent = {
         restart: "最初から",
         copied: "コピーしました！",
         minHint30: "最低30文字、最大200文字",
-        minHint100: "最低100文字、最大300文字"
+        minHint100: "最低100文字、最大300文字",
+        disclaimer: "この探索は純粋に実験的なものであり、心理学的または精神科学的な意味や目的は一切ありません。\n探索内容があなたの考えに沿うように、各セクションではできるだけ詳しく「物語」形式で説明するか、必要な背景情報を追加してください。各入力セクションには最低・最大文字数の制限があり、満たす必要があります。",
+        understood: "了解しました"
     },
     "ko": {
         intro: "잠재의식을 탐구하면 내면이 진정으로 필요한 것을 더 잘 이해할 수 있습니다. 현재 고민하고 있는 문제를 생각하고 아래에 입력해 주세요.",
@@ -446,7 +452,9 @@ const exploreContent = {
         restart: "다시 시작",
         copied: "복사됨!",
         minHint30: "최소 30자, 최대 200자",
-        minHint100: "최소 100자, 최대 300자"
+        minHint100: "최소 100자, 최대 300자",
+        disclaimer: "이 탐구는 순수하게 실험적인 성격이며, 어떠한 심리학적 또는 정신과학적 의미나 목적도 없습니다.\n탐구 내용이 당신의 생각에 부합하도록, 각 섹션에서 가능한 한 자세히 '이야기하기' 방식으로 설명하거나, 필요한 배경 정보를 추가해 주세요. 각 입력 섹션에는 최소 및 최대 글자 수 제한이 있으며, 이를 충족해야 진행할 수 있습니다.",
+        understood: "알겠습니다"
     },
     "de": {
         intro: "Die Erforschung Ihres Unterbewusstseins hilft Ihnen, Ihre inneren Bedürfnisse besser zu verstehen. Denken Sie über Ihr aktuelles Problem nach und geben Sie es unten ein.",
@@ -461,7 +469,9 @@ const exploreContent = {
         restart: "Neu starten",
         copied: "Kopiert!",
         minHint30: "Min 30 Zeichen, max 200",
-        minHint100: "Min 100 Zeichen, max 300"
+        minHint100: "Min 100 Zeichen, max 300",
+        disclaimer: "Diese Erforschung ist rein experimenteller Natur und hat keinerlei psychologische oder psychiatrische wissenschaftliche Bedeutung oder Zweck.\nDamit der Inhalt Ihren Gedanken m\u00F6glichst entspricht, beschreiben Sie bitte jeden Abschnitt so detailliert wie m\u00F6glich in Form einer Geschichte oder f\u00FCgen Sie notwendige Hintergrundinformationen hinzu. Jeder Abschnitt hat Mindest- und H\u00F6chstzeichenbegrenzungen.",
+        understood: "Verstanden"
     },
     "ru": {
         intro: "Исследование подсознания поможет лучше понять, что вам действительно нужно. Подумайте о проблеме, которая вас беспокоит, и введите её ниже.",
@@ -476,7 +486,9 @@ const exploreContent = {
         restart: "Начать заново",
         copied: "Скопировано!",
         minHint30: "Мин 30 символов, макс 200",
-        minHint100: "Мин 100 символов, макс 300"
+        minHint100: "Мин 100 символов, макс 300",
+        disclaimer: "Данное исследование носит исключительно экспериментальный характер и не имеет психологического или психиатрического научного значения или цели.\nЧтобы содержание соответствовало вашим мыслям, описывайте каждый раздел как можно подробнее в формате «рассказа» или добавляйте необходимую фоновую информацию. Каждый раздел имеет минимальное и максимальное ограничение по количеству символов.",
+        understood: "Понятно"
     },
     "ar": {
         intro: "استكشاف عقلك الباطن سيساعدك على فهم ما تحتاجه حقاً. فكر في المشكلة التي تزعجك وأدخلها أدناه.",
@@ -491,7 +503,9 @@ const exploreContent = {
         restart: "ابدأ من جديد",
         copied: "تم النسخ!",
         minHint30: "٣٠ حرف كحد أدنى، ٢٠٠ كحد أقصى",
-        minHint100: "١٠٠ حرف كحد أدنى، ٣٠٠ كحد أقصى"
+        minHint100: "١٠٠ حرف كحد أدنى، ٣٠٠ كحد أقصى",
+        disclaimer: "هذا الاستكشاف تجريبي بحت ولا يحمل أي أهمية أو غرض نفسي أو علمي.\nلكي يتوافق المحتوى مع أفكارك، يرجى وصف كل قسم بأسلوب \"سرد القصة\" بأكبر قدر ممكن من التفصيل، أو إضافة معلومات خلفية تراها ضرورية. لكل قسم حدود دنيا وقصوى لعدد الأحرف يجب استيفاؤها.",
+        understood: "فهمت"
     },
     "pt": {
         intro: "Explorar seu subconsciente ajudará você a entender melhor o que seu interior precisa. Pense no problema que te preocupa e digite abaixo.",
@@ -506,7 +520,9 @@ const exploreContent = {
         restart: "Recomeçar",
         copied: "Copiado!",
         minHint30: "Mín 30 car., máx 200",
-        minHint100: "Mín 100 car., máx 300"
+        minHint100: "Mín 100 car., máx 300",
+        disclaimer: "Esta exploração é puramente experimental e não possui qualquer significado ou propósito psicológico ou psiquiátrico.\nPara que o conteúdo corresponda aos seus pensamentos, descreva cada seção da forma mais detalhada possível no estilo de \"contar uma história\", ou adicione informações de contexto necessárias. Cada seção tem limites mínimos e máximos de caracteres que devem ser cumpridos.",
+        understood: "Entendi"
     }
 };
 
@@ -586,8 +602,8 @@ function goToExplore() {
     document.getElementById('explore-tap-hint-1').textContent = e.tapHint;
     document.getElementById('explore-tap-hint-2').textContent = e.tapHint;
     // Disclaimer
-    document.getElementById('explore-disclaimer').textContent = e.disclaimer || exploreContent['en'].disclaimer;
-    document.getElementById('explore-disclaimer-btn').textContent = e.understood || exploreContent['en'].understood;
+    document.getElementById('explore-disclaimer').textContent = e.disclaimer;
+    document.getElementById('explore-disclaimer-btn').textContent = e.understood;
     exploreReset();
     switchPage('main-page', 'explore-page');
 }
@@ -604,13 +620,26 @@ function goToPractice() {
     document.getElementById('practice-intro-text').textContent = d.practiceIntro;
     document.getElementById('tap-hint-1').textContent = d.tapHint;
     document.getElementById('tap-hint-2').textContent = d.tapHint;
-    // Disclaimer
-    const e = exploreContent[currentLang];
-    const disclaimerText = (currentLang === 'zh-TW')
-        ? "本探索純屬實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n針對每一段的練習，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。"
-        : "This exploration is purely experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nFor each practice section, please describe in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary.";
-    document.getElementById('practice-disclaimer').textContent = disclaimerText;
-    document.getElementById('practice-disclaimer-btn').textContent = e.understood || 'I understand';
+    // Disclaimer — use per-language content
+    const practiceDisclaimers = {
+        'en': "This exploration is purely experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nFor each practice section, please describe in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary.",
+        'zh-TW': "本探索純屬實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n針對每一段的練習，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。",
+        'fr': "Cette exploration est purement expérimentale et ne revêt aucune signification ou finalité psychologique ou psychiatrique.\nPour chaque exercice, veuillez décrire de manière détaillée sous forme de « récit », ou ajoutez les informations contextuelles que vous jugez nécessaires.",
+        'es': "Esta exploración es puramente experimental y no tiene ningún significado o propósito psicológico o psiquiátrico.\nPara cada ejercicio, describe de la manera más detallada posible en forma de \"historia\", o añade información de contexto que consideres necesaria.",
+        'ja': "この探索は純粋に実験的なものであり、心理学的または精神科学的な意味や目的は一切ありません。\n各練習では、「物語を語る」ように、できるだけ詳しく説明するか、必要と思われる背景情報を追加してください。",
+        'ko': "이 탐구는 순수하게 실험적인 성격이며, 어떠한 심리학적 또는 정신과학적 의미나 목적도 없습니다.\n각 연습에서 가능한 한 자세히 '이야기하기' 방식으로 설명하거나, 필요하다고 생각되는 배경 정보를 추가해 주세요.",
+        'de': "Diese Erforschung ist rein experimenteller Natur und hat keinerlei psychologische oder psychiatrische wissenschaftliche Bedeutung oder Zweck.\nBitte beschreiben Sie jeden Abschnitt so detailliert wie möglich in Form einer \"Geschichte\" oder fügen Sie Hintergrundinformationen hinzu, die Sie für notwendig halten.",
+        'ru': "Данное исследование носит исключительно экспериментальный характер и не имеет психологического или психиатрического научного значения или цели.\nДля каждого упражнения, пожалуйста, описывайте как можно подробнее в формате «рассказа» или добавляйте фоновую информацию, которую считаете необходимой.",
+        'ar': "هذا الاستكشاف تجريبي بحت ولا يحمل أي أهمية أو غرض نفسي أو علمي.\nلكل تمرين، يرجى الوصف بأكبر قدر ممكن من التفصيل بأسلوب \"سرد القصة\"، أو إضافة معلومات خلفية تراها ضرورية.",
+        'pt': "Esta exploração é puramente experimental e não possui qualquer significado ou propósito psicológico ou psiquiátrico.\nPara cada exercício, descreva da forma mais detalhada possível no estilo de \"contar uma história\", ou adicione informações de contexto que considere necessárias."
+    };
+    document.getElementById('practice-disclaimer').textContent = practiceDisclaimers[currentLang] || practiceDisclaimers['en'];
+    const understoodTexts = {
+        'en': 'I understand', 'zh-TW': '我知道了', 'fr': "J'ai compris", 'es': 'Entendido',
+        'ja': '了解しました', 'ko': '알겠습니다', 'de': 'Verstanden', 'ru': 'Понятно',
+        'ar': 'فهمت', 'pt': 'Entendi'
+    };
+    document.getElementById('practice-disclaimer-btn').textContent = understoodTexts[currentLang] || understoodTexts['en'];
     resetPractice();
     switchPage('main-page', 'practice-page');
 }
