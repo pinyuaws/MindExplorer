@@ -67,11 +67,11 @@ const content = {
         step3: "Découvrez votre histoire",
         navHome: "Accueil", navExplore: "Explorer", navPractice: "Pratiquer",
         comingSoon: "Bientôt disponible...",
-        practiceIntro: "Cet exercice vous aidera à entraîner votre imagination et créativité, ainsi que votre capacité à associer images et mots. Ensuite, tirez une carte image.",
-        afterPhoto: "En vous basant sur cette image, décrivez une courte histoire d'environ 1 minute. Quand vous avez terminé, appuyez sur Suivant.",
+        practiceIntro: "Cet exercice vous aidera efficacement à entraîner votre imagination et créativité, ainsi que votre capacité à associer images et mots, pour mieux explorer vos propres pensées. Ensuite, tirez une carte image.",
+        afterPhoto: "En vous basant sur cette image, décrivez une courte histoire d'environ 1 minute. Décrivez en détail, y compris les personnes, événements, temps, lieu et objets que vous voyez. N'hésitez pas à créer des informations contextuelles si nécessaire. Quand vous avez terminé, appuyez sur Suivant.",
         next: "Suivant",
         beforeWord: "Maintenant, tirez une carte de mots.",
-        afterWord: "Continuez à développer votre histoire précédente, mais connectez le sens de ce mot comme résultat de l'histoire. Racontez l'histoire complète depuis le début, environ 3 minutes.",
+        afterWord: "Continuez à développer votre histoire précédente, mais connectez le sens de « {word} » comme résultat global ou jugement de l'histoire. Comment pensez-vous que l'histoire devrait évoluer, ou qu'ajouteriez-vous ? Expliquez en environ 1 minute.",
         startOver: "Recommencer",
         tapHint: "Touchez les cartes pour tirer"
     },
@@ -90,11 +90,11 @@ const content = {
         step3: "Descubre tu historia",
         navHome: "Inicio", navExplore: "Explorar", navPractice: "Practicar",
         comingSoon: "Próximamente...",
-        practiceIntro: "Este ejercicio te ayudará a entrenar tu imaginación y creatividad, así como tu capacidad para asociar imágenes con palabras. A continuación, saca una carta de imagen.",
-        afterPhoto: "Basándote en esta imagen, describe una historia corta de aproximadamente 1 minuto. Cuando termines, presiona Siguiente.",
+        practiceIntro: "Este ejercicio te ayudará eficazmente a entrenar tu imaginación y creatividad, así como tu capacidad para asociar imágenes con palabras, para explorar mejor tus propios pensamientos. A continuación, saca una carta de imagen.",
+        afterPhoto: "Basándote en esta imagen, describe una historia corta de aproximadamente 1 minuto. Describe detalladamente, incluyendo las personas, eventos, tiempo, lugar y objetos que ves. Si es necesario, puedes crear información de contexto. Cuando termines, presiona Siguiente.",
         next: "Siguiente",
         beforeWord: "Ahora, saca una carta de palabras.",
-        afterWord: "Continúa extendiendo tu historia anterior, pero conecta el significado de esta palabra como resultado de la historia. Vuelve a contar la historia completa desde el principio, aproximadamente 3 minutos.",
+        afterWord: "Continúa extendiendo tu historia anterior, pero conecta el significado de \"{word}\" como resultado global o juicio de la historia. ¿Cómo crees que debería desarrollarse la historia, o qué añadirías? Explica en aproximadamente 1 minuto.",
         startOver: "Empezar de nuevo",
         tapHint: "Toca las cartas para sacar"
     },
@@ -113,11 +113,11 @@ const content = {
         step3: "あなたの物語を発見する",
         navHome: "ホーム", navExplore: "探求", navPractice: "練習",
         comingSoon: "近日公開...",
-        practiceIntro: "この練習は、想像力と創造力、そしてイメージと言葉の連想能力を効果的に訓練します。次に、絵柄カードを1枚引いてください。",
-        afterPhoto: "この画像に基づいて、約1分間の短い物語を描写してください。描写し終わったら、次へを押してください。",
+        practiceIntro: "この練習は、想像力と創造力、そしてイメージと言葉の連想能力を効果的に訓練し、自分の考えをより深く探るのに役立ちます。次に、絵柄カードを1枚引いてください。",
+        afterPhoto: "この画像に基づいて、約1分間の短い物語を描写してください。見える人物、出来事、時間、場所、物をできるだけ詳しく描写してください。必要に応じて背景情報を創作しても構いません。描写し終わったら、次へを押してください。",
         next: "次へ",
         beforeWord: "次に、言葉カードを引いてください。",
-        afterWord: "前の物語を引き続き発展させてください。ただし、この言葉の意味を物語の結末として結びつけ、最初から完全な物語を語り直してください。約3分間です。",
+        afterWord: "前の物語を引き続き発展させてください。ただし、「{word}」の意味を物語全体の結果や判断として結びつけてください。物語はどう展開すべきか、何を補足しますか？約1分間で説明してください。",
         startOver: "最初から",
         tapHint: "カードをタップして引く"
     },
@@ -136,11 +136,11 @@ const content = {
         step3: "당신의 이야기 발견",
         navHome: "홈", navExplore: "탐구", navPractice: "연습",
         comingSoon: "곧 출시...",
-        practiceIntro: "이 연습은 상상력과 창의력, 그리고 이미지와 단어의 연상 능력을 효과적으로 훈련합니다. 다음으로 그림 카드를 한 장 뽑아주세요.",
-        afterPhoto: "이 이미지를 바탕으로 약 1분 정도의 짧은 이야기를 묘사해 주세요. 끝나면 다음을 눌러주세요.",
+        practiceIntro: "이 연습은 상상력과 창의력, 그리고 이미지와 단어의 연상 능력을 효과적으로 훈련하여 자신의 생각을 더 잘 탐구할 수 있도록 도와줍니다. 다음으로 그림 카드를 한 장 뽑아주세요.",
+        afterPhoto: "이 이미지를 바탕으로 약 1분 정도의 짧은 이야기를 묘사해 주세요. 보이는 사람, 사건, 시간, 장소, 사물을 가능한 한 상세히 묘사하세요. 필요하면 배경 정보를 만들어도 됩니다. 끝나면 다음을 눌러주세요.",
         next: "다음",
         beforeWord: "이제 단어 카드를 뽑아주세요.",
-        afterWord: "이전 이야기를 계속 발전시키되, 이 단어의 의미를 이야기의 결과로 연결하세요. 처음부터 완전한 이야기를 다시 말해주세요. 약 3분입니다.",
+        afterWord: "이전 이야기를 계속 발전시키되, \"{word}\"의 의미를 이야기 전체의 결과나 판단으로 연결하세요. 이야기가 어떻게 전개되어야 하거나 무엇을 추가하시겠습니까? 약 1분으로 설명해 주세요.",
         startOver: "다시 시작",
         tapHint: "카드를 탭하여 뽑기"
     },
@@ -159,11 +159,11 @@ const content = {
         step3: "Ihre Geschichte entdecken",
         navHome: "Start", navExplore: "Erkunden", navPractice: "Üben",
         comingSoon: "Demnächst...",
-        practiceIntro: "Diese Übung hilft Ihnen, Vorstellungskraft und Kreativität sowie die Assoziation von Bildern und Wörtern zu trainieren. Ziehen Sie als Nächstes eine Bildkarte.",
-        afterPhoto: "Beschreiben Sie basierend auf diesem Bild eine kurze Geschichte von etwa 1 Minute. Wenn Sie fertig sind, drücken Sie Weiter.",
+        practiceIntro: "Diese Übung hilft Ihnen effektiv, Vorstellungskraft und Kreativität sowie die Assoziation von Bildern und Wörtern zu trainieren, um Ihre eigenen Gedanken besser zu erkunden. Ziehen Sie als Nächstes eine Bildkarte.",
+        afterPhoto: "Beschreiben Sie basierend auf diesem Bild eine kurze Geschichte von etwa 1 Minute. Beschreiben Sie detailliert, einschließlich der Personen, Ereignisse, Zeit, Ort und Objekte. Erstellen Sie bei Bedarf Hintergrundinformationen. Wenn Sie fertig sind, drücken Sie Weiter.",
         next: "Weiter",
         beforeWord: "Ziehen Sie jetzt eine Wortkarte.",
-        afterWord: "Erweitern Sie Ihre vorherige Geschichte, verbinden Sie die Bedeutung dieses Wortes als Ergebnis. Erzählen Sie die vollständige Geschichte von Anfang an neu, etwa 3 Minuten.",
+        afterWord: "Erweitern Sie Ihre vorherige Geschichte, aber verbinden Sie die Bedeutung von \"{word}\" als Gesamtergebnis oder Beurteilung der Geschichte. Wie sollte sich die Geschichte entwickeln, oder was würden Sie ergänzen? Erklären Sie in etwa 1 Minute.",
         startOver: "Neu starten",
         tapHint: "Tippen Sie zum Ziehen"
     },
@@ -182,11 +182,11 @@ const content = {
         step3: "Откройте свою историю",
         navHome: "Главная", navExplore: "Исследовать", navPractice: "Практика",
         comingSoon: "Скоро...",
-        practiceIntro: "Это упражнение поможет тренировать воображение и креативность, а также способность ассоциировать образы со словами. Вытяните карту с изображением.",
-        afterPhoto: "На основе этого изображения опишите короткую историю примерно на 1 минуту. Когда закончите, нажмите Далее.",
+        practiceIntro: "Это упражнение эффективно поможет тренировать воображение и креативность, а также способность ассоциировать образы со словами, чтобы лучше исследовать свои мысли. Вытяните карту с изображением.",
+        afterPhoto: "На основе этого изображения опишите короткую историю примерно на 1 минуту. Опишите подробно, включая людей, события, время, место и объекты. При необходимости создайте фоновую информацию. Когда закончите, нажмите Далее.",
         next: "Далее",
         beforeWord: "Теперь вытяните карту со словом.",
-        afterWord: "Продолжите развивать предыдущую историю, связав значение этого слова как результат. Расскажите полную историю с начала, примерно 3 минуты.",
+        afterWord: "Продолжите развивать предыдущую историю, но свяжите значение \"{word}\" как общий результат или оценку истории. Как, по-вашему, должна развиваться история, или что бы вы добавили? Объясните примерно за 1 минуту.",
         startOver: "Начать заново",
         tapHint: "Нажмите на карты"
     },
@@ -205,11 +205,11 @@ const content = {
         step3: "اكتشف قصتك",
         navHome: "الرئيسية", navExplore: "استكشاف", navPractice: "ممارسة",
         comingSoon: "قريباً...",
-        practiceIntro: "هذا التمرين سيساعدك على تدريب خيالك وإبداعك وقدرتك على ربط الصور بالكلمات. اسحب بطاقة صورة.",
-        afterPhoto: "بناءً على هذه الصورة، صف قصة قصيرة مدتها حوالي دقيقة. عندما تنتهي، اضغط التالي.",
+        practiceIntro: "هذا التمرين سيساعدك بفعالية على تدريب خيالك وإبداعك وقدرتك على ربط الصور بالكلمات، لمساعدتك على استكشاف أفكارك بشكل أفضل. اسحب بطاقة صورة.",
+        afterPhoto: "بناءً على هذه الصورة، صف قصة قصيرة مدتها حوالي دقيقة. صف بالتفصيل، بما في ذلك الأشخاص والأحداث والزمان والمكان والأشياء التي تراها. يمكنك إنشاء معلومات خلفية إذا لزم الأمر. عندما تنتهي، اضغط التالي.",
         next: "التالي",
         beforeWord: "الآن، اسحب بطاقة كلمات.",
-        afterWord: "واصل تطوير قصتك السابقة، لكن اربط معنى هذه الكلمة كنتيجة للقصة. أعد سرد القصة الكاملة من البداية، حوالي 3 دقائق.",
+        afterWord: "واصل تطوير قصتك السابقة، لكن اربط معنى \"{word}\" كنتيجة إجمالية أو حكم للقصة. كيف تعتقد أن القصة يجب أن تتطور، أو ماذا ستضيف؟ اشرح في حوالي دقيقة واحدة.",
         startOver: "ابدأ من جديد",
         tapHint: "اضغط على البطاقات للسحب"
     },
@@ -228,11 +228,11 @@ const content = {
         step3: "Descubra sua história",
         navHome: "Início", navExplore: "Explorar", navPractice: "Praticar",
         comingSoon: "Em breve...",
-        practiceIntro: "Este exercício ajudará a treinar sua imaginação e criatividade, bem como a capacidade de associar imagens com palavras. Tire uma carta de imagem.",
-        afterPhoto: "Com base nesta imagem, descreva uma história curta de aproximadamente 1 minuto. Quando terminar, pressione Próximo.",
+        practiceIntro: "Este exercício ajudará efetivamente a treinar sua imaginação e criatividade, bem como a capacidade de associar imagens com palavras, para explorar melhor seus próprios pensamentos. Tire uma carta de imagem.",
+        afterPhoto: "Com base nesta imagem, descreva uma história curta de aproximadamente 1 minuto. Descreva detalhadamente, incluindo as pessoas, eventos, tempo, lugar e objetos que você vê. Sinta-se à vontade para criar informações de contexto se necessário. Quando terminar, pressione Próximo.",
         next: "Próximo",
         beforeWord: "Agora, tire uma carta de palavras.",
-        afterWord: "Continue estendendo sua história anterior, mas conecte o significado desta palavra como resultado da história. Reconte a história completa desde o início, aproximadamente 3 minutos.",
+        afterWord: "Continue estendendo sua história anterior, mas conecte o significado de \"{word}\" como resultado global ou julgamento da história. Como você acha que a história deveria se desenvolver, ou o que acrescentaria? Explique em aproximadamente 1 minuto.",
         startOver: "Recomeçar",
         tapHint: "Toque nas cartas para tirar"
     }
@@ -402,6 +402,9 @@ const exploreContent = {
         copied: "Copié !",
         minHint30: "Min 30 car., max 200",
         minHint100: "Min 100 car., max 300",
+        minHint25: "Min 25 car., max 200",
+        minHint50: "Min 50 car., max 300",
+        minHint60: "Min 60 car., max 300",
         disclaimer: "Cette exploration est purement expérimentale et ne revêt aucune signification ou finalité psychologique ou psychiatrique.\nPour que le contenu de l'exploration corresponde au mieux à vos pensées, veuillez décrire chaque section sous forme de « récit » avec autant de détails que possible, ou ajoutez les informations contextuelles nécessaires. Chaque section a des limites de caractères minimales et maximales à respecter.",
         understood: "J'ai compris"
     },
@@ -419,6 +422,9 @@ const exploreContent = {
         copied: "¡Copiado!",
         minHint30: "Mín 30 car., máx 200",
         minHint100: "Mín 100 car., máx 300",
+        minHint25: "Mín 25 car., máx 200",
+        minHint50: "Mín 50 car., máx 300",
+        minHint60: "Mín 60 car., máx 300",
         disclaimer: "Esta exploración es puramente experimental y no tiene ningún significado o propósito psicológico o psiquiátrico científico.\nPara que el contenido se ajuste a tus pensamientos, describe cada sección de la forma más detallada posible en estilo de \"historia\", o añade información de contexto que consideres necesaria. Cada sección tiene límites mínimos y máximos de caracteres que deben cumplirse.",
         understood: "Entendido"
     },
@@ -436,6 +442,9 @@ const exploreContent = {
         copied: "コピーしました！",
         minHint30: "最低30文字、最大200文字",
         minHint100: "最低100文字、最大300文字",
+        minHint25: "最低25文字、最大200文字",
+        minHint50: "最低50文字、最大300文字",
+        minHint60: "最低60文字、最大300文字",
         disclaimer: "この探索は純粋に実験的なものであり、心理学的または精神科学的な意味や目的は一切ありません。\n探索内容があなたの考えに沿うように、各セクションではできるだけ詳しく「物語」形式で説明するか、必要な背景情報を追加してください。各入力セクションには最低・最大文字数の制限があり、満たす必要があります。",
         understood: "了解しました"
     },
@@ -453,6 +462,9 @@ const exploreContent = {
         copied: "복사됨!",
         minHint30: "최소 30자, 최대 200자",
         minHint100: "최소 100자, 최대 300자",
+        minHint25: "최소 25자, 최대 200자",
+        minHint50: "최소 50자, 최대 300자",
+        minHint60: "최소 60자, 최대 300자",
         disclaimer: "이 탐구는 순수하게 실험적인 성격이며, 어떠한 심리학적 또는 정신과학적 의미나 목적도 없습니다.\n탐구 내용이 당신의 생각에 부합하도록, 각 섹션에서 가능한 한 자세히 '이야기하기' 방식으로 설명하거나, 필요한 배경 정보를 추가해 주세요. 각 입력 섹션에는 최소 및 최대 글자 수 제한이 있으며, 이를 충족해야 진행할 수 있습니다.",
         understood: "알겠습니다"
     },
@@ -470,6 +482,9 @@ const exploreContent = {
         copied: "Kopiert!",
         minHint30: "Min 30 Zeichen, max 200",
         minHint100: "Min 100 Zeichen, max 300",
+        minHint25: "Min 25 Zeichen, max 200",
+        minHint50: "Min 50 Zeichen, max 300",
+        minHint60: "Min 60 Zeichen, max 300",
         disclaimer: "Diese Erforschung ist rein experimenteller Natur und hat keinerlei psychologische oder psychiatrische wissenschaftliche Bedeutung oder Zweck.\nDamit der Inhalt Ihren Gedanken m\u00F6glichst entspricht, beschreiben Sie bitte jeden Abschnitt so detailliert wie m\u00F6glich in Form einer Geschichte oder f\u00FCgen Sie notwendige Hintergrundinformationen hinzu. Jeder Abschnitt hat Mindest- und H\u00F6chstzeichenbegrenzungen.",
         understood: "Verstanden"
     },
@@ -487,6 +502,9 @@ const exploreContent = {
         copied: "Скопировано!",
         minHint30: "Мин 30 символов, макс 200",
         minHint100: "Мин 100 символов, макс 300",
+        minHint25: "Мин 25 символов, макс 200",
+        minHint50: "Мин 50 символов, макс 300",
+        minHint60: "Мин 60 символов, макс 300",
         disclaimer: "Данное исследование носит исключительно экспериментальный характер и не имеет психологического или психиатрического научного значения или цели.\nЧтобы содержание соответствовало вашим мыслям, описывайте каждый раздел как можно подробнее в формате «рассказа» или добавляйте необходимую фоновую информацию. Каждый раздел имеет минимальное и максимальное ограничение по количеству символов.",
         understood: "Понятно"
     },
@@ -504,6 +522,9 @@ const exploreContent = {
         copied: "تم النسخ!",
         minHint30: "٣٠ حرف كحد أدنى، ٢٠٠ كحد أقصى",
         minHint100: "١٠٠ حرف كحد أدنى، ٣٠٠ كحد أقصى",
+        minHint25: "٢٥ حرف كحد أدنى، ٢٠٠ كحد أقصى",
+        minHint50: "٥٠ حرف كحد أدنى، ٣٠٠ كحد أقصى",
+        minHint60: "٦٠ حرف كحد أدنى، ٣٠٠ كحد أقصى",
         disclaimer: "هذا الاستكشاف تجريبي بحت ولا يحمل أي أهمية أو غرض نفسي أو علمي.\nلكي يتوافق المحتوى مع أفكارك، يرجى وصف كل قسم بأسلوب \"سرد القصة\" بأكبر قدر ممكن من التفصيل، أو إضافة معلومات خلفية تراها ضرورية. لكل قسم حدود دنيا وقصوى لعدد الأحرف يجب استيفاؤها.",
         understood: "فهمت"
     },
@@ -521,6 +542,9 @@ const exploreContent = {
         copied: "Copiado!",
         minHint30: "Mín 30 car., máx 200",
         minHint100: "Mín 100 car., máx 300",
+        minHint25: "Mín 25 car., máx 200",
+        minHint50: "Mín 50 car., máx 300",
+        minHint60: "Mín 60 car., máx 300",
         disclaimer: "Esta exploração é puramente experimental e não possui qualquer significado ou propósito psicológico ou psiquiátrico.\nPara que o conteúdo corresponda aos seus pensamentos, descreva cada seção da forma mais detalhada possível no estilo de \"contar uma história\", ou adicione informações de contexto necessárias. Cada seção tem limites mínimos e máximos de caracteres que devem ser cumpridos.",
         understood: "Entendi"
     }
@@ -811,7 +835,7 @@ function exploreDrawPhoto() {
         document.getElementById('explore-next3').textContent = e.next;
         document.getElementById('explore-next3').disabled = true;
         // Setup char counter (min 60, max 300)
-        setupCharCounter('explore-pic-desc', 'pic-desc-counter', 60, 300, 'explore-next3', e.minHint60 || e.minHint80 || e.minHint50);
+        setupCharCounter('explore-pic-desc', 'pic-desc-counter', 60, 300, 'explore-next3', e.minHint60 || e.minHint100);
     }, 3200);
 }
 
