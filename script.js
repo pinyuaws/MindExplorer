@@ -967,25 +967,41 @@ function exploreRestart() {
 }
 
 // =============================================
-// VISIT COUNTER
+// VISIT COUNTER (Firebase Realtime Database)
 // =============================================
-function incrementVisitCounter(key, elementId) {
-    let count = parseInt(localStorage.getItem(key) || '0', 10);
-    count++;
-    localStorage.setItem(key, count);
-    document.getElementById(elementId).textContent = '#' + count;
-}
+const firebaseConfig = {
+    apiKey: "AIzaSyDiqEWvGIneFlFrb_G0f8Zdtp525EBvNJo",
+    authDomain: "mind-explorer-counter.firebaseapp.com",
+    databaseURL: "https://mind-explorer-counter-default-rtdb.firebaseio.com",
+    projectId: "mind-explorer-counter",
+    storageBucket: "mind-explorer-counter.firebasestorage.app",
+    messagingSenderId: "1028889943295",
+    appId: "1:1028889943295:web:79cbe2ba9fc9c409ec40ca"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+const visitCountRef = db.ref('visitCount');
 
 function incrementTotalVisit() {
-    let count = parseInt(localStorage.getItem('totalVisitCount') || '0', 10);
-    count++;
-    localStorage.setItem('totalVisitCount', count);
-    updateTotalVisitDisplay(count);
+    visitCountRef.transaction(function(currentCount) {
+        return (currentCount || 0) + 1;
+    });
 }
 
 function updateTotalVisitDisplay(count) {
     const padded = String(count).padStart(6, '0');
     document.getElementById('total-visit-counter').textContent = 'Total Visit: ' + padded;
+}
+
+// Listen for real-time updates
+visitCountRef.on('value', function(snapshot) {
+    const count = snapshot.val() || 0;
+    updateTotalVisitDisplay(count);
+});
+
+function incrementVisitCounter(key, elementId) {
+    // kept for compatibility but not actively used
 }
 
 // =============================================
@@ -1026,7 +1042,5 @@ document.addEventListener('click', startMusicOnInteraction);
 // INIT
 // =============================================
 window.addEventListener('DOMContentLoaded', () => {
-    // Display current total visit count
-    const count = parseInt(localStorage.getItem('totalVisitCount') || '0', 10);
-    updateTotalVisitDisplay(count);
+    // Firebase listener handles display automatically
 });
