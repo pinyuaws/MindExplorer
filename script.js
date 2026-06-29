@@ -351,7 +351,7 @@ const langKeyMap = {
 // === Explore Content (Sub-Web 1) ===
 const exploreContent = {
     "en": {
-        intro: "Exploring your subconscious will help you better understand what your inner self truly needs. Please think about the issue currently troubling you, and enter it in the box below.",
+        intro: "Exploring your subconscious will help you understand your inner state. Please think about the issue currently troubling you, and enter it in the box below (please describe the background of this dilemma in as much detail as possible, so AI can better assist with interpretation).",
         placeholder: "Describe your current dilemma or question...",
         next: "Next",
         tapHint: "Tap the cards to draw",
@@ -370,7 +370,7 @@ const exploreContent = {
         understood: "I understand"
     },
     "zh-TW": {
-        intro: "探索你的潛意識，將能夠幫助你更了解你內心所需要的，請先思考目前困擾你的問題，並填入下面的方塊中。",
+        intro: "探索你的潛意識，將能夠幫助你了解自己的內心狀況，請先思考目前困擾你的問題，並填入下面的方塊中（請盡量詳細描述這個困境的背景因素，以讓AI更能協助解讀）。",
         placeholder: "描述你目前的困境或問題...",
         next: "下一步",
         tapHint: "點擊卡牌抽取",
@@ -389,7 +389,7 @@ const exploreContent = {
         understood: "我知道了"
     },
     "fr": {
-        intro: "Explorer votre subconscient vous aidera à mieux comprendre vos besoins intérieurs. Réfléchissez au problème qui vous préoccupe et entrez-le ci-dessous.",
+        intro: "Explorer votre subconscient vous aidera à comprendre votre état intérieur. Réfléchissez au problème qui vous préoccupe et entrez-le ci-dessous (veuillez décrire le contexte de ce dilemme en détail pour permettre à l'IA de mieux vous aider).",
         placeholder: "Décrivez votre dilemme actuel...",
         next: "Suivant",
         tapHint: "Touchez les cartes pour tirer",
@@ -409,7 +409,7 @@ const exploreContent = {
         understood: "J'ai compris"
     },
     "es": {
-        intro: "Explorar tu subconsciente te ayudará a entender mejor lo que tu interior necesita. Piensa en el problema que te preocupa y escríbelo abajo.",
+        intro: "Explorar tu subconsciente te ayudará a comprender tu estado interior. Piensa en el problema que te preocupa y escríbelo abajo (describe el contexto de este dilema con el mayor detalle posible para que la IA pueda ayudarte mejor).",
         placeholder: "Describe tu dilema actual...",
         next: "Siguiente",
         tapHint: "Toca las cartas para sacar",
@@ -429,7 +429,7 @@ const exploreContent = {
         understood: "Entendido"
     },
     "ja": {
-        intro: "潜在意識を探ることで、内心が本当に必要としているものをより深く理解できます。今あなたを悩ませている問題を考え、下のボックスに入力してください。",
+        intro: "潜在意識を探ることで、自分の内面の状態を理解するのに役立ちます。今あなたを悩ませている問題を考え、下のボックスに入力してください（AIがより適切に解釈できるよう、この困難の背景をできるだけ詳しく記述してください）。",
         placeholder: "現在の悩みや問題を記述してください...",
         next: "次へ",
         tapHint: "カードをタップして引く",
@@ -449,7 +449,7 @@ const exploreContent = {
         understood: "了解しました"
     },
     "ko": {
-        intro: "잠재의식을 탐구하면 내면이 진정으로 필요한 것을 더 잘 이해할 수 있습니다. 현재 고민하고 있는 문제를 생각하고 아래에 입력해 주세요.",
+        intro: "잠재의식을 탐구하면 자신의 내면 상태를 이해하는 데 도움이 됩니다. 현재 고민하고 있는 문제를 생각하고 아래에 입력해 주세요 (AI가 더 잘 해석할 수 있도록 이 고민의 배경을 가능한 한 상세히 설명해 주세요).",
         placeholder: "현재의 고민이나 질문을 설명하세요...",
         next: "다음",
         tapHint: "카드를 탭하여 뽑기",
@@ -469,7 +469,7 @@ const exploreContent = {
         understood: "알겠습니다"
     },
     "de": {
-        intro: "Die Erforschung Ihres Unterbewusstseins hilft Ihnen, Ihre inneren Bedürfnisse besser zu verstehen. Denken Sie über Ihr aktuelles Problem nach und geben Sie es unten ein.",
+        intro: "Die Erforschung Ihres Unterbewusstseins hilft Ihnen, Ihren inneren Zustand zu verstehen. Denken Sie über Ihr aktuelles Problem nach und geben Sie es unten ein (bitte beschreiben Sie den Hintergrund dieses Dilemmas so detailliert wie möglich, damit die KI besser helfen kann).",
         placeholder: "Beschreiben Sie Ihr aktuelles Dilemma...",
         next: "Weiter",
         tapHint: "Tippen Sie zum Ziehen",
@@ -489,7 +489,7 @@ const exploreContent = {
         understood: "Verstanden"
     },
     "ru": {
-        intro: "Исследование подсознания поможет лучше понять, что вам действительно нужно. Подумайте о проблеме, которая вас беспокоит, и введите её ниже.",
+        intro: "Исследование подсознания поможет вам понять свое внутреннее состояние. Подумайте о проблеме, которая вас беспокоит, и введите её ниже (опишите контекст этой ситуации как можно подробнее, чтобы ИИ мог лучше помочь с интерпретацией).",
         placeholder: "Опишите вашу текущую проблему...",
         next: "Далее",
         tapHint: "Нажмите на карты",
@@ -509,7 +509,7 @@ const exploreContent = {
         understood: "Понятно"
     },
     "ar": {
-        intro: "استكشاف عقلك الباطن سيساعدك على فهم ما تحتاجه حقاً. فكر في المشكلة التي تزعجك وأدخلها أدناه.",
+        intro: "استكشاف عقلك الباطن سيساعدك على فهم حالتك الداخلية. فكر في المشكلة التي تزعجك وأدخلها أدناه (يرجى وصف خلفية هذه المعضلة بأكبر قدر ممكن من التفصيل حتى يتمكن الذكاء الاصطناعي من مساعدتك بشكل أفضل).",
         placeholder: "صف مشكلتك الحالية...",
         next: "التالي",
         tapHint: "اضغط على البطاقات للسحب",
@@ -529,7 +529,7 @@ const exploreContent = {
         understood: "فهمت"
     },
     "pt": {
-        intro: "Explorar seu subconsciente ajudará você a entender melhor o que seu interior precisa. Pense no problema que te preocupa e digite abaixo.",
+        intro: "Explorar seu subconsciente ajudará você a compreender seu estado interior. Pense no problema que te preocupa e digite abaixo (descreva o contexto deste dilema com o máximo de detalhes possível para que a IA possa ajudar melhor na interpretação).",
         placeholder: "Descreva seu dilema atual...",
         next: "Próximo",
         tapHint: "Toque nas cartas para tirar",
@@ -929,7 +929,7 @@ function copyResult() {
     const wordInLang = exploreData.word[langKey] || exploreData.word.en;
     const langLabel = content[currentLang].label;
 
-    const prompt = `I have great uncertainty about the situation described in "${exploreData.issue}" and want to better understand my own thoughts.
+    const prompt = `I have great uncertainty or difficulty making a decision about the situation described in "${exploreData.issue}" and want to better understand my own thoughts.
 Through subconscious exploration, I believe my feelings about this situation are conveyed through my description of an image: "${exploreData.picDesc}"
 And my dilemma or involvement with this environment/situation is like: "${exploreData.personalDesc}"
 When returning to my true inner thoughts, combined with the word "${exploreData.word.en}", I feel that I actually want a result or influence related to: "${exploreData.wordpicDesc}"
@@ -939,8 +939,9 @@ Please help me clarify my true inner thoughts based on the above, and generate y
 2. Please use an empathetic, calm emotional tone and objective language to analyze my current situation and my true thoughts and intentions.
 3. First, based on my dilemma and related descriptions, tell me how I objectively observe the overall state of this dilemma and possible future developments.
 4. Also tell me how I perceive this difficulty or situation, and what impact or worries it might bring to my life if it continues, or what kind of dilemma I am facing.
-5. Finally, tell me what my innermost desire or preferred way of handling this is, but what difficulties or problems I might face that prevent me from following my heart, and how I should properly handle this to align with my deepest expectations and thoughts.
-6. After concluding, continue to ask me if there are thoughts I'd like to share and discuss — you are willing to assist me, and continue answering based on the previous context.`;
+5. Tell me what my innermost desire or preferred way of handling this is, but what difficulties or problems I might face that prevent me from following my heart, and how I should properly handle this to align with my deepest expectations and thoughts.
+6. Finally, regarding the dilemma or difficult choice I mentioned at the beginning, what do you think my heart leans more toward in terms of choosing or resolving it? Give me suggestions and explanations.
+7. After concluding, continue to ask me if there are thoughts I'd like to share and discuss — you are willing to assist me, and continue answering based on the previous context.`;
 
     navigator.clipboard.writeText(prompt).then(() => {
         document.getElementById('copy-result-btn').textContent = e.copied;
