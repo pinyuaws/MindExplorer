@@ -609,6 +609,151 @@ function goToLanguagePage() {
     }, 500);
 }
 
+// === Language Dropdown ===
+const langOptions = [
+    { code: 'en', label: 'English' },
+    { code: 'zh-TW', label: '繁體中文' },
+    { code: 'fr', label: 'Français' },
+    { code: 'es', label: 'Español' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ru', label: 'Русский' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' }
+];
+
+function buildLangDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    dropdown.innerHTML = '';
+    langOptions.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'lang-dropdown-item' + (opt.code === currentLang ? ' active' : '');
+        btn.textContent = opt.label;
+        btn.onclick = () => {
+            switchLanguageInPlace(opt.code);
+            closeAllDropdowns();
+        };
+        dropdown.appendChild(btn);
+    });
+}
+
+function toggleLangDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    const isOpen = dropdown.classList.contains('open');
+    closeAllDropdowns();
+    if (!isOpen) {
+        buildLangDropdown(dropdownId);
+        dropdown.classList.add('open');
+    }
+}
+
+function closeAllDropdowns() {
+    document.querySelectorAll('.lang-dropdown').forEach(d => d.classList.remove('open'));
+}
+
+function switchLanguageInPlace(lang) {
+    currentLang = lang;
+    if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+        document.documentElement.removeAttribute('dir');
+    }
+    localStorage.setItem('mindExplorerLang', lang);
+
+    // Update all language labels
+    const label = content[lang].label;
+    document.getElementById('current-lang-label').textContent = label;
+    document.getElementById('current-lang-label-explore').textContent = label;
+    document.getElementById('current-lang-label-practice').textContent = label;
+
+    // Update the current active page content
+    const activePage = document.querySelector('.page.active');
+    if (activePage.id === 'main-page') {
+        updateMainPage();
+    } else if (activePage.id === 'explore-page') {
+        // Re-run goToExplore logic to refresh all text
+        const d = content[currentLang];
+        const e = exploreContent[currentLang];
+        document.getElementById('explore-intro-text').textContent = e.intro;
+        document.getElementById('explore-issue-input').placeholder = e.placeholder;
+        document.getElementById('explore-next1').textContent = e.next;
+        document.getElementById('explore-tap-hint-1').textContent = e.tapHint;
+        document.getElementById('explore-tap-hint-2').textContent = e.tapHint;
+        document.getElementById('explore-disclaimer').textContent = e.disclaimer;
+        document.getElementById('explore-disclaimer-btn').textContent = e.understood;
+        // Update any visible step text
+        const step3Text = document.getElementById('explore-step3-text');
+        if (step3Text && step3Text.textContent) step3Text.textContent = e.afterPhoto;
+        const step4Text = document.getElementById('explore-step4-text');
+        if (step4Text && step4Text.textContent) step4Text.textContent = e.connectionQ;
+        const step7Text = document.getElementById('explore-step7-text');
+        if (step7Text && step7Text.textContent && exploreData.word) {
+            const langKey = langKeyMap[currentLang];
+            const wordInLang = exploreData.word[langKey] || exploreData.word.en;
+            step7Text.textContent = e.afterWord.replace('{word}', wordInLang);
+        }
+        const finalText = document.getElementById('explore-final-text');
+        if (finalText && finalText.textContent) finalText.textContent = e.finalText;
+        const copyBtn = document.getElementById('copy-result-btn');
+        if (copyBtn && copyBtn.textContent) copyBtn.textContent = e.copyBtn;
+        const restartBtn = document.getElementById('explore-restart-btn');
+        if (restartBtn && restartBtn.textContent) restartBtn.textContent = e.restart;
+        // Update next buttons
+        document.getElementById('explore-next3').textContent = e.next;
+        document.getElementById('explore-next4').textContent = e.next;
+        document.getElementById('explore-next7').textContent = e.next;
+    } else if (activePage.id === 'practice-page') {
+        const d = content[currentLang];
+        const e = exploreContent[currentLang];
+        document.getElementById('practice-intro-text').textContent = d.practiceIntro;
+        document.getElementById('tap-hint-1').textContent = d.tapHint;
+        document.getElementById('tap-hint-2').textContent = d.tapHint;
+        // Update disclaimer
+        const practiceDisclaimers = {
+            'en': "This exploration is purely experimental in nature and does not carry any psychological or psychiatric scientific significance or purpose.\nFor each practice section, please describe in a \"storytelling\" manner with as much detail as possible, or add background information you feel is necessary.",
+            'zh-TW': "本探索純屬實驗性質，並不具備任何心理學或精神科學上的意義及目的。\n針對每一段的練習，請用「說故事」的方式盡量詳細描述整個故事，或添加你認為需要補充說明的背景訊息。",
+            'fr': "Cette exploration est purement expérimentale et ne revêt aucune signification ou finalité psychologique ou psychiatrique.\nPour chaque exercice, veuillez décrire de manière détaillée sous forme de « récit », ou ajoutez les informations contextuelles que vous jugez nécessaires.",
+            'es': "Esta exploración es puramente experimental y no tiene ningún significado o propósito psicológico o psiquiátrico.\nPara cada ejercicio, describe de la manera más detallada posible en forma de \"historia\", o añade información de contexto que consideres necesaria.",
+            'ja': "この探索は純粋に実験的なものであり、心理学的または精神科学的な意味や目的は一切ありません。\n各練習では、「物語を語る」ように、できるだけ詳しく説明するか、必要と思われる背景情報を追加してください。",
+            'ko': "이 탐구는 순수하게 실험적인 성격이며, 어떠한 심리학적 또는 정신과학적 의미나 목적도 없습니다.\n각 연습에서 가능한 한 자세히 '이야기하기' 방식으로 설명하거나, 필요하다고 생각되는 배경 정보를 추가해 주세요.",
+            'de': "Diese Erforschung ist rein experimenteller Natur und hat keinerlei psychologische oder psychiatrische wissenschaftliche Bedeutung oder Zweck.\nBitte beschreiben Sie jeden Abschnitt so detailliert wie möglich in Form einer \"Geschichte\" oder fügen Sie Hintergrundinformationen hinzu, die Sie für notwendig halten.",
+            'ru': "Данное исследование носит исключительно экспериментальный характер и не имеет психологического или психиатрического научного значения или цели.\nДля каждого упражнения, пожалуйста, описывайте как можно подробнее в формате «рассказа» или добавляйте фоновую информацию, которую считаете необходимой.",
+            'ar': "هذا الاستكشاف تجريبي بحت ولا يحمل أي أهمية أو غرض نفسي أو علمي.\nلكل تمرين، يرجى الوصف بأكبر قدر ممكن من التفصيل بأسلوب \"سرد القصة\"، أو إضافة معلومات خلفية تراها ضرورية.",
+            'pt': "Esta exploração é puramente experimental e não possui qualquer significado ou propósito psicológico ou psiquiátrico.\nPara cada exercício, descreva da forma mais detalhada possível no estilo de \"contar uma história\", ou adicione informações de contexto que considere necessárias."
+        };
+        document.getElementById('practice-disclaimer').textContent = practiceDisclaimers[currentLang] || practiceDisclaimers['en'];
+        const understoodTexts = {
+            'en': 'I understand', 'zh-TW': '我知道了', 'fr': "J'ai compris", 'es': 'Entendido',
+            'ja': '了解しました', 'ko': '알겠습니다', 'de': 'Verstanden', 'ru': 'Понятно',
+            'ar': 'فهمت', 'pt': 'Entendi'
+        };
+        document.getElementById('practice-disclaimer-btn').textContent = understoodTexts[currentLang] || understoodTexts['en'];
+        // Update visible step text
+        const step2Text = document.getElementById('practice-step2-text');
+        if (step2Text && step2Text.textContent) step2Text.textContent = d.afterPhoto;
+        const nextBtn = document.getElementById('next-step-btn');
+        if (nextBtn && nextBtn.textContent) nextBtn.textContent = d.next;
+        const step3Intro = document.getElementById('practice-step3-intro');
+        if (step3Intro && step3Intro.textContent) step3Intro.textContent = d.beforeWord;
+        const step5Text = document.getElementById('practice-step5-text');
+        if (step5Text && step5Text.textContent && drawnWord) {
+            const langKey = langKeyMap[currentLang];
+            const wordInLang = drawnWord[langKey] || drawnWord.en;
+            step5Text.textContent = d.afterWord.replace('{word}', wordInLang);
+        }
+        const restartBtn = document.getElementById('restart-btn');
+        if (restartBtn && restartBtn.textContent) restartBtn.textContent = d.startOver;
+    }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.lang-dropdown-wrapper')) {
+        closeAllDropdowns();
+    }
+});
+
 function goToMain() {
     const activePage = document.querySelector('.page.active');
     if (currentLang === 'ar') document.documentElement.setAttribute('dir', 'rtl');
@@ -980,28 +1125,27 @@ function exploreRestart() {
 // =============================================
 // FONT SIZE ADJUSTMENT
 // =============================================
-let currentFontScale = parseFloat(localStorage.getItem('fontScale') || '1');
-applyFontScale();
+let currentFontSize = parseFloat(localStorage.getItem('fontSizePx') || '16');
+applyFontSize();
 
-function applyFontScale() {
-    document.documentElement.style.fontSize = (currentFontScale * 100) + '%';
+function applyFontSize() {
+    document.documentElement.style.setProperty('--user-font-size', currentFontSize + 'px');
+    document.body.style.fontSize = currentFontSize + 'px';
 }
 
 function increaseFontSize() {
-    if (currentFontScale < 1.5) {
-        currentFontScale += 0.1;
-        currentFontScale = Math.round(currentFontScale * 10) / 10;
-        localStorage.setItem('fontScale', currentFontScale);
-        applyFontScale();
+    if (currentFontSize < 24) {
+        currentFontSize += 2;
+        localStorage.setItem('fontSizePx', currentFontSize);
+        applyFontSize();
     }
 }
 
 function decreaseFontSize() {
-    if (currentFontScale > 0.7) {
-        currentFontScale -= 0.1;
-        currentFontScale = Math.round(currentFontScale * 10) / 10;
-        localStorage.setItem('fontScale', currentFontScale);
-        applyFontScale();
+    if (currentFontSize > 10) {
+        currentFontSize -= 2;
+        localStorage.setItem('fontSizePx', currentFontSize);
+        applyFontSize();
     }
 }
 

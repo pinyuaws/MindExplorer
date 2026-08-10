@@ -57,9 +57,12 @@
                     <button class="font-btn" onclick="decreaseFontSize()" aria-label="Decrease font size">A-</button>
                     <button class="font-btn" onclick="increaseFontSize()" aria-label="Increase font size">A+</button>
                 </div>
-                <button class="lang-switch-btn" onclick="goToLanguagePage()">
-                    🌐 <span id="current-lang-label">English</span>
-                </button>
+                <div class="lang-dropdown-wrapper">
+                    <button class="lang-switch-btn" onclick="toggleLangDropdown('main-lang-dropdown')">
+                        🌐 <span id="current-lang-label">English</span>
+                    </button>
+                    <div class="lang-dropdown" id="main-lang-dropdown"></div>
+                </div>
             </div>
         </header>
 
@@ -187,9 +190,12 @@
                     <button class="font-btn" onclick="decreaseFontSize()" aria-label="Decrease font size">A-</button>
                     <button class="font-btn" onclick="increaseFontSize()" aria-label="Increase font size">A+</button>
                 </div>
-                <button class="lang-switch-btn" onclick="goToLanguagePage()">
-                    🌐 <span id="current-lang-label-explore">English</span>
-                </button>
+                <div class="lang-dropdown-wrapper">
+                    <button class="lang-switch-btn" onclick="toggleLangDropdown('explore-lang-dropdown')">
+                        🌐 <span id="current-lang-label-explore">English</span>
+                    </button>
+                    <div class="lang-dropdown" id="explore-lang-dropdown"></div>
+                </div>
             </div>
         </header>
         <main class="main-content explore-content">
@@ -339,9 +345,12 @@
                     <button class="font-btn" onclick="decreaseFontSize()" aria-label="Decrease font size">A-</button>
                     <button class="font-btn" onclick="increaseFontSize()" aria-label="Increase font size">A+</button>
                 </div>
-                <button class="lang-switch-btn" onclick="goToLanguagePage()">
-                    🌐 <span id="current-lang-label-practice">English</span>
-                </button>
+                <div class="lang-dropdown-wrapper">
+                    <button class="lang-switch-btn" onclick="toggleLangDropdown('practice-lang-dropdown')">
+                        🌐 <span id="current-lang-label-practice">English</span>
+                    </button>
+                    <div class="lang-dropdown" id="practice-lang-dropdown"></div>
+                </div>
             </div>
         </header>
         <main class="main-content practice-content">

@@ -44,7 +44,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     font-weight: 400;
-    font-size: clamp(15px, 1.8vw, 18px);
+    font-size: 16px;
     line-height: 1.7;
 }
 
@@ -160,6 +160,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 
 .header-right {
     display: flex; align-items: center; gap: 0.5rem;
+    flex-shrink: 0;
 }
 .font-size-controls {
     display: flex; gap: 3px;
@@ -177,6 +178,39 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 .font-btn:hover {
     background: rgba(230,200,154,0.15);
     border-color: var(--champagne-gold);
+}
+
+/* Language Dropdown */
+.lang-dropdown-wrapper {
+    position: relative;
+}
+.lang-dropdown {
+    display: none;
+    position: absolute; top: 100%; right: 0;
+    margin-top: 6px;
+    background: var(--dark-blue-grey);
+    border: 1px solid var(--gold-border);
+    border-radius: var(--card-radius);
+    padding: 6px 0;
+    min-width: 140px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    z-index: 200;
+}
+.lang-dropdown.open { display: block; }
+.lang-dropdown-item {
+    display: block; width: 100%;
+    background: none; border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem; color: var(--champagne-gold);
+    padding: 0.5rem 1rem; text-align: left;
+    cursor: pointer; transition: background 0.2s ease;
+}
+.lang-dropdown-item:hover {
+    background: rgba(230,200,154,0.1);
+}
+.lang-dropdown-item.active {
+    background: rgba(230,200,154,0.15);
+    font-weight: 600;
 }
 
 .back-btn {
@@ -280,7 +314,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 .practice-instruction {
-    font-size: clamp(0.8rem, 1.4vw, 0.95rem); line-height: 1.7;
+    font-size: 0.9em; line-height: 1.7;
     color: var(--text-body); font-weight: 300;
     max-width: 520px; padding: 1rem 1.2rem;
     background: var(--dark-blue-grey);
@@ -436,7 +470,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     background: var(--dark-blue-grey);
     border: var(--card-border) solid var(--gold-border);
     border-radius: var(--card-radius);
-    width: 85vw; max-width: 500px;
+    width: 90vw; max-width: 600px;
 }
 .recap-card {
     width: 100%;
@@ -516,7 +550,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     padding: 0.7rem 0.9rem;
     color: var(--text-body);
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(0.8rem, 1.4vw, 0.95rem); font-weight: 300;
+    font-size: 0.9em; font-weight: 300;
     resize: vertical; line-height: 1.6;
     transition: border-color 0.3s ease;
     max-height: 25vh;
@@ -528,11 +562,13 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 .text-input::placeholder { color: var(--text-muted); }
 
 .input-wrapper { position: relative; width: 100%; max-width: 520px; }
-.input-wrapper .text-input { width: 100%; max-width: none; }
+.input-wrapper .text-input { width: 100%; max-width: none; padding-bottom: 1.8rem; }
 .char-counter {
-    position: absolute; bottom: 6px; right: 10px;
-    font-size: 0.7rem; color: var(--text-muted);
+    position: absolute; bottom: 8px; right: 10px;
+    font-size: 0.65rem; color: var(--text-muted);
     font-family: 'Montserrat', sans-serif; pointer-events: none;
+    background: var(--dark-blue-grey); padding: 0 4px;
+    border-radius: 3px;
 }
 .char-counter.warning { color: var(--amber-gold); }
 .char-counter.over { color: #d45; }
@@ -603,7 +639,9 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 [dir="rtl"] .welcome-text, [dir="rtl"] .practice-instruction { text-align: right; }
 [dir="rtl"] .main-header { flex-direction: row-reverse; }
 [dir="rtl"] .header-left { flex-direction: row-reverse; }
+[dir="rtl"] .header-right { flex-direction: row-reverse; }
 [dir="rtl"] .sticky-issue-bar { text-align: right; align-self: flex-end; }
+[dir="rtl"] .lang-dropdown { right: auto; left: 0; }
 
 /* === Responsive === */
 @media (max-width: 768px) {
@@ -624,7 +662,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     .revealed-card.with-input { max-height: 47vh; max-width: 72vw; }
     .revealed-card.with-input .revealed-img { max-height: 47vh; max-width: 72vw; }
     .revealed-word-card { width: 55vw; max-width: 280px; }
-    .recap-layout { width: 80vw; max-width: 360px; padding: 1rem; }
+    .recap-layout { width: 92vw; max-width: 432px; padding: 1rem; }
     .text-input { font-size: 0.9rem; padding: 0.75rem 0.9rem; }
     .input-wrapper { max-width: 100%; }
     .card-deck { width: 130px; height: 182px; }
