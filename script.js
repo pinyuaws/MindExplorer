@@ -920,16 +920,20 @@ function exploreNext7() {
     document.getElementById('explore-final-text').textContent = e.finalText;
     document.getElementById('copy-result-btn').textContent = e.copyBtn;
     document.getElementById('explore-restart-btn').textContent = e.restart;
+
+    // Build prompt and set Google AI search link
+    const prompt = buildPrompt();
+    const googleQuery = encodeURIComponent(prompt);
+    document.getElementById('google-ai-link').href = 'https://www.google.com/search?q=' + googleQuery + '&udm=50';
 }
 
-// Copy result to clipboard using AIPrompt format
-function copyResult() {
-    const e = exploreContent[currentLang];
+// Build the AI prompt
+function buildPrompt() {
     const langKey = langKeyMap[currentLang];
     const wordInLang = exploreData.word[langKey] || exploreData.word.en;
     const langLabel = content[currentLang].label;
 
-    const prompt = `I have great uncertainty or difficulty making a decision about the situation described in "${exploreData.issue}" and want to better understand my own thoughts.
+    return `I have great uncertainty or difficulty making a decision about the situation described in "${exploreData.issue}" and want to better understand my own thoughts.
 Through subconscious exploration, I believe my feelings about this situation are conveyed through my description of an image: "${exploreData.picDesc}"
 And my dilemma or involvement with this environment/situation is like: "${exploreData.personalDesc}"
 When returning to my true inner thoughts, combined with the word "${exploreData.word.en}", I feel that I actually want a result or influence related to: "${exploreData.wordpicDesc}"
@@ -942,6 +946,12 @@ Please help me clarify my true inner thoughts based on the above, and generate y
 5. Tell me what my innermost desire or preferred way of handling this is, but what difficulties or problems I might face that prevent me from following my heart, and how I should properly handle this to align with my deepest expectations and thoughts.
 6. Finally, regarding the dilemma or difficult choice I mentioned at the beginning, what do you think my heart leans more toward in terms of choosing or resolving it? Give me suggestions and explanations.
 7. After concluding, continue to ask me if there are thoughts I'd like to share and discuss — you are willing to assist me, and continue answering based on the previous context.`;
+}
+
+// Copy result to clipboard using AIPrompt format
+function copyResult() {
+    const e = exploreContent[currentLang];
+    const prompt = buildPrompt();
 
     navigator.clipboard.writeText(prompt).then(() => {
         document.getElementById('copy-result-btn').textContent = e.copied;
@@ -965,6 +975,34 @@ Please help me clarify my true inner thoughts based on the above, and generate y
 
 function exploreRestart() {
     goToMain();
+}
+
+// =============================================
+// FONT SIZE ADJUSTMENT
+// =============================================
+let currentFontScale = parseFloat(localStorage.getItem('fontScale') || '1');
+applyFontScale();
+
+function applyFontScale() {
+    document.documentElement.style.fontSize = (currentFontScale * 100) + '%';
+}
+
+function increaseFontSize() {
+    if (currentFontScale < 1.5) {
+        currentFontScale += 0.1;
+        currentFontScale = Math.round(currentFontScale * 10) / 10;
+        localStorage.setItem('fontScale', currentFontScale);
+        applyFontScale();
+    }
+}
+
+function decreaseFontSize() {
+    if (currentFontScale > 0.7) {
+        currentFontScale -= 0.1;
+        currentFontScale = Math.round(currentFontScale * 10) / 10;
+        localStorage.setItem('fontScale', currentFontScale);
+        applyFontScale();
+    }
 }
 
 // =============================================

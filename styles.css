@@ -44,7 +44,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(15px, 1.8vw, 18px);
     line-height: 1.7;
 }
 
@@ -158,6 +158,27 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 }
 .lang-switch-btn:hover { background: rgba(230,200,154,0.12); border-color: var(--champagne-gold); }
 
+.header-right {
+    display: flex; align-items: center; gap: 0.5rem;
+}
+.font-size-controls {
+    display: flex; gap: 3px;
+}
+.font-btn {
+    background: rgba(230,200,154,0.06);
+    border: 1px solid var(--gold-border);
+    border-radius: 6px; padding: 0.3rem 0.5rem;
+    color: var(--champagne-gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; transition: all 0.3s ease;
+    min-width: 30px; text-align: center;
+}
+.font-btn:hover {
+    background: rgba(230,200,154,0.15);
+    border-color: var(--champagne-gold);
+}
+
 .back-btn {
     background: none; border: none;
     color: var(--champagne-gold); font-size: 1.1rem;
@@ -251,15 +272,17 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 .practice-step { display: none; }
 .practice-step.active {
     display: flex; flex-direction: column;
-    align-items: center; gap: 1.5rem;
+    align-items: center; gap: 1rem;
     animation: fadeInUp 0.6s ease-out;
+    min-height: calc(100vh - 8rem);
+    justify-content: center;
 }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 .practice-instruction {
-    font-size: 0.95rem; line-height: 1.8;
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem); line-height: 1.7;
     color: var(--text-body); font-weight: 300;
-    max-width: 520px; padding: 1.2rem 1.5rem;
+    max-width: 520px; padding: 1rem 1.2rem;
     background: var(--dark-blue-grey);
     border: var(--card-border) solid var(--gold-border);
     border-radius: var(--card-radius);
@@ -352,7 +375,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 /* === Revealed Cards === */
 .revealed-card {
     display: none;
-    max-width: 85vw; max-height: 70vh;
+    max-width: 72vw; max-height: 56vh;
     border-radius: var(--card-radius);
     border: var(--card-border) solid var(--champagne-gold);
     overflow: hidden;
@@ -362,11 +385,20 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     display: flex; justify-content: center; align-items: center;
     animation: cardFlip 0.8s ease-out;
 }
+/* Smaller photo when shown with input (fit in single page) */
+.revealed-card.with-input {
+    max-height: 56vh;
+    max-width: 72vw;
+}
 .revealed-img {
     display: block;
-    max-width: 85vw; max-height: 70vh;
+    max-width: 72vw; max-height: 68vh;
     width: auto; height: auto;
     object-fit: contain;
+}
+.revealed-card.with-input .revealed-img {
+    max-height: 56vh;
+    max-width: 72vw;
 }
 
 .revealed-word-card {
@@ -457,8 +489,10 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 .explore-step { display: none; }
 .explore-step.active {
     display: flex; flex-direction: column;
-    align-items: center; gap: 1.5rem;
+    align-items: center; gap: 1rem;
     animation: fadeInUp 0.6s ease-out;
+    min-height: calc(100vh - 8rem);
+    justify-content: center;
 }
 
 .sticky-issue-bar {
@@ -479,12 +513,13 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     background: var(--dark-blue-grey);
     border: var(--card-border) solid var(--gold-border);
     border-radius: var(--card-radius);
-    padding: 0.9rem 1rem;
+    padding: 0.7rem 0.9rem;
     color: var(--text-body);
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem; font-weight: 300;
-    resize: vertical; line-height: 1.7;
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem); font-weight: 300;
+    resize: vertical; line-height: 1.6;
     transition: border-color 0.3s ease;
+    max-height: 25vh;
 }
 .text-input:focus {
     outline: none; border-color: var(--champagne-gold);
@@ -519,6 +554,13 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     border-color: var(--champagne-gold);
     box-shadow: 0 0 10px var(--gold-glow);
     transform: translateY(-2px);
+}
+.google-ai-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.9rem 2.5rem;
 }
 
 /* === Visit Counter === */
@@ -565,7 +607,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
 
 /* === Responsive === */
 @media (max-width: 768px) {
-    .main-content { padding: 5rem 16px 3rem; }
+    .main-content { padding: 5rem 16px 2rem; }
     .options-grid { grid-template-columns: 1fr; }
     .option-card { padding: 1.5rem 1.2rem; }
     .steps-grid { gap: 1.5rem; }
@@ -573,9 +615,53 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; }
     .language-grid { grid-template-columns: repeat(2, 1fr); }
     .hero-cards { width: 150px; height: 210px; }
     .hero-card { width: 115px; height: 162px; }
+    .hero-section { padding: 1rem 0 1rem; }
+    .hero-title { font-size: 1.6rem; }
+    .section-divider { padding: 1.5rem 0; }
+    .practice-instruction { font-size: 0.85rem; padding: 1rem 1.2rem; max-width: 100%; }
+    .revealed-card { max-width: 68vw; max-height: 56vh; }
+    .revealed-img { max-width: 68vw; max-height: 56vh; }
+    .revealed-card.with-input { max-height: 47vh; max-width: 72vw; }
+    .revealed-card.with-input .revealed-img { max-height: 47vh; max-width: 72vw; }
+    .revealed-word-card { width: 55vw; max-width: 280px; }
+    .recap-layout { width: 80vw; max-width: 360px; padding: 1rem; }
+    .text-input { font-size: 0.9rem; padding: 0.75rem 0.9rem; }
+    .input-wrapper { max-width: 100%; }
+    .card-deck { width: 130px; height: 182px; }
+    .deck-card { width: 130px; height: 182px; }
+    .welcome-text { font-size: 0.85rem; }
+    .btn-primary { font-size: 0.85rem; padding: 0.65rem 1.5rem; }
+    .btn-secondary { font-size: 0.85rem; padding: 0.6rem 1.4rem; }
+    .practice-step.active, .explore-step.active { gap: 1rem; }
+    .shuffle-scene { width: 220px; height: 240px; }
+    .spread-card { width: 70px; height: 98px; }
+    .sp-n  { --dy: -80px; } .sp-ne { --dx: 58px; --dy: -58px; }
+    .sp-e  { --dx: 80px; } .sp-se { --dx: 58px; --dy: 58px; }
+    .sp-s  { --dy: 80px; } .sp-sw { --dx: -58px; --dy: 58px; }
+    .sp-w  { --dx: -80px; } .sp-nw { --dx: -58px; --dy: -58px; }
+    .spread-center-card { width: 85px; height: 119px; }
+    .sticky-issue-bar { font-size: 0.75rem; padding: 0.5rem 0.8rem; }
+    .total-visit-counter { font-size: 0.75rem; }
+    .google-ai-btn { font-size: 0.9rem; padding: 0.75rem 2rem; }
+    .ai-links { gap: 0.5rem; }
+    .ai-link-btn { font-size: 0.75rem; padding: 0.5rem 0.9rem; }
 }
 @media (max-width: 480px) {
     .language-grid { grid-template-columns: 1fr; }
     .hero-cards { width: 130px; height: 182px; }
     .hero-card { width: 100px; height: 140px; }
+    .site-title { font-size: 1.8rem; }
+    .revealed-card { max-width: 72vw; max-height: 50vh; }
+    .revealed-img { max-width: 72vw; max-height: 50vh; }
+    .revealed-card.with-input { max-height: 40vh; max-width: 74vw; }
+    .revealed-card.with-input .revealed-img { max-height: 40vh; max-width: 74vw; }
+    .card-deck { width: 110px; height: 154px; }
+    .deck-card { width: 110px; height: 154px; }
+    .shuffle-scene { width: 190px; height: 210px; }
+    .spread-card { width: 60px; height: 84px; }
+    .sp-n  { --dy: -70px; } .sp-ne { --dx: 50px; --dy: -50px; }
+    .sp-e  { --dx: 70px; } .sp-se { --dx: 50px; --dy: 50px; }
+    .sp-s  { --dy: 70px; } .sp-sw { --dx: -50px; --dy: 50px; }
+    .sp-w  { --dx: -70px; } .sp-nw { --dx: -50px; --dy: -50px; }
+    .spread-center-card { width: 72px; height: 101px; }
 }
